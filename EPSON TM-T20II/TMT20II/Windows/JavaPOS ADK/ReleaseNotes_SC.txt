@@ -1,0 +1,425 @@
+﻿               EPSON JavaPOS ADK 1.14.2版本  发行说明
+                                                       精工爱普生公司
+                                                               2016年 3月23日
+
+1. 概述
+    EPSON JavaPOS ADK 1.14.2版本已被发行。使用该发行，您可以开发与UnifiedPOS
+    规格1.14.1版本兼容的应用程序。
+
+    本发行说明包含多个软件包的相关信息。
+     - EPSON JavaPOS ADK 1.14.2 标准安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T88V安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T88VI安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T70II安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T20安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T81安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T82安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T81II安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T82II安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-L90安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-T20II安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-P20安装
+     - EPSON JavaPOS ADK 1.14.2 仅限TM-P80安装
+
+2. 已确认的操作环境
+    EPSON JavaPOS ADK的操作在以下环境中已确认。
+  (1) OS (操作系统)
+     Windows XP Professional SP3 (32位)
+     Windows Vista SP2 (32位/64位)
+     Windows Server 2008 SP2 (32位/64位)
+     Windows 7 SP1 (32位/64位)
+     Windows 8 (32位/64位)
+     Windows 8.1 (32位/64位)
+     Windows 10 (32位/64位)
+     Windows Server 2008 R2 SP1 (64位)
+     Windows Server2012(64位)
+     Windows Server2012 R2(64位)
+     Windows Embedded Standard (32位)
+     Windows Embedded Standard 7 (32位/64位)
+     Red Hat Enterprise Linux 6.6 (32位/64位)
+     Red Hat Enterprise Linux 7.0 (64位)
+     SuSE Linux Enterprise 11.3 (32位/64位)
+     SuSE Linux Enterprise 12.0 (64位)
+     CentOS Linux 6.6 (32位/64位)
+     CentOS Linux 7.0 (64位)
+     Ubuntu 12.04 (32位/64位)
+     Ubuntu 14.04 (64位)
+  (2) Java 操作环境
+     Java Standard Edition 7 Update 75
+     Java Standard Edition 8 Update 40
+      http://www.oracle.com/technetwork/java/javase/overview/index-jsp-136246.html
+  (3) 图像处理API
+     Java Advanced Imaging 1.1.2
+      http://www.oracle.com/technetwork/java/current-142188.html
+
+3. 安装与卸载
+    请遵照“EPSON JavaPOS ADK 安装指南”中的步骤进行安装与卸载。
+
+    有关下载和详细的安装说明，
+    请参考“EPSON JavaPOS ADK Installation Guide for Linux.txt”网站
+
+    注意在文件安装期间取消或突然终止安装程序可能使系统处于无法完成进一步安装的
+    状态。为了在这种情况下安装JavaPOS，请使用“强制卸载”选项，然后再次运行
+    安装程序。如果当使用“强制卸载”选项时，该进程被取消，系统可能仍然处于无法
+    完成进一步重新安装的状态。在这种情况下，请再次使用“强制卸载”选项。
+
+    当在以前安装过JavaPOS的系统上运行该安装程序时，在同一位置进行安装是必要的。
+    如果JavaPOS被安装到不同的位置，之前的设置可能会抑制正确的操作。在这种情况
+    下为了将JavaPOS安装到不同的位置，在运行该安装程序之前请使用“强制卸载”选
+    项来清除所有之前的设置。
+
+
+4. JavaPOS 1.14 安装
+4.1 所支持的设备与已确认的固件版本
+    有关详情请参考“SupportedDevicesList.txt”。
+
+4.2 特别说明
+4.2.1 示例程序
+      - 当您使用该示例程序时，登录ID需要的是管理员帐户组。
+      - 使用逻辑设备名称注册。
+          POSPrinter        : POSPrinter
+          LineDisplay       : LineDisplay
+          MICR              : MICR
+          CheckScanner      : CheckScanner
+          CashDrawer        : CashDrawer
+          MSR               : MSR
+          Keylock           : Keylock
+          ElectronicJournal : ElectronicJournal
+      - 该示例程序显示一个(多个)控制方法的示例。
+        因此，不保证所有设备的所有设置均能正确操作。
+
+4.2.2 安装与卸载
+      - 当安装该软件时，请在以下目录中创建一个名为“epson\pos”的目录。
+
+      Windows
+         Windows XP/Embedded:
+          <System Drive>:\Documents and Settings\All Users
+         Windows Vista/2008 Server/Windows 7:
+          <System Drive>:\ProgramData
+      Linux
+         /var
+
+      DeviceService操作所要求的临时文件与信息文件保存在该“epson\pos”目录中。
+      不要删除该目录。
+
+      - 如果您选择“自定义”为安装类型并执行安装，不要为一个快捷文件夹指定根目
+        录(“/”)。快捷文件夹将不被创建。(仅限Linux)
+
+      - 关于安装，当“msvcr71.dll”文件在\WINDOWS\System32\目录中被复制
+        或更新时，或者如果由安装程序进行安装的文件在安装时正在使用，则需要
+        重新启动。
+
+      - 关于卸载，由卸载程序进行卸载的文件在卸载时正在使用，则需要重新启动。
+
+      - 可以同时执行安装程序与卸载程序，
+        但是，该操作不被支持。(仅限Linux)
+
+      - 在升级安装后，卸载程序有一个问题，即卸载程序无法删除所有安装目录。关于
+        默认安装目录位置，在Linux系统上卸载程序无法删除“/opt/EpsonJavaPOS”
+        目录；在Windows系统上卸载程序无法删除“C:\Program Files\Epson\JavaPOS”
+        与“C:\Program Files\Epson”目录。在卸载完成后您可以手动删除这些目录。
+        
+
+      - 如果您选择“自定义”为安装类型并更改JavaPOS的服务的安装位置，您将无法
+        从安装程序所创建的CheckHealth工具的快捷方式上启动CheckHealth工具。
+        在这种情况下，请遵照以下说明更正快捷方式的基础Shell脚本(或批处理文件)。
+
+      - Classpath设置
+         JavaPOS服务的安装目录中的JAR文件，需要为CLASSPATH设置。
+
+     - 在本产品的以前版本（1.11.20版本-1.14版本）上进行无提示覆盖安装时，
+       请重新启动系统。
+
+4.2.3 跟踪功能
+      当使用跟踪(日志)功能时
+       - 跟踪结果保存在以下目录中。
+
+      Windows
+         Windows XP/Embedded:
+          <System Drive>:\Documents and Settings\All Users\EPSON\pos\tm\Trace
+         Windows Vista/2008 Server/Windows 7:
+          <System Drive>:\ProgramData\EPSON\pos\tm\Trace
+      Linux
+         /var/epson_javapos/pos/trace
+
+4.2.4 USB通信
+       - 如果以下设备在SetupPOS注册中注册，则在“4.2.4.1 步骤”中配置设置。
+           Windows: TM-H5000II/TM-H5200/TM-J2000/TM-J2100/TM-J7000/TM-J7100/
+                    TM-J7500/TM-J7600
+4.2.4.1 步骤
+      1) 设置USB端口设置[端口名称类型]到[序列号]。
+      2) 指定USB序列号作为端口名称。
+ 
+      USB序列号是为USB独占提供的序列号。
+      USB序列号可以用以下步骤检查。
+
+      - 执行打印机自检打印。
+        通常，如果在打印机盖板关闭并按下进纸开关的情况下，打开打印机电源，自检
+        打印则在卷纸上执行。
+      - 从打印结果中可以识别序列号。
+        当打印结果为a)格式时，显示的“ID”部分为USB序列
+        号(以下示例中YYYYYYYYYYYYYY即为序列号)。当打印结果为b)格式时，USB
+        序列号与打印机序列号相同。 在这种情况下，检查打印机上所附的标签。
+
+        a) 当打印USB序列号时
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          Interface UB-UXXXX Ver.X.XX
+           ID  :YYYYYYYYYYYYYY
+              :
+              :
+          ----------
+
+        b) 当不打印USB序列号时
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          USB Interface or other
+              :
+              :
+          ----------
+
+        * 上述所示“USB Interface or other”可能简单地打印为“USB Interface”。
+
+    注意当使用此方法设置设备时，使用不同的USB序列号更改设备时，需要更改
+    SetupPOS的设置。
+
+    注意在Linux上当使用序列号作为USB连接的端口名称类型时，
+    需要在SetupPOS上仅输入序列号的前17个字符。
+
+    如果当打开/关闭打印机时，显示“找到新的硬件向导”，则取消该向导并安装
+    EPSON高级打印机驱动程序(4.50或更高版本)。(仅限Windows)
+
+4.2.5 蓝牙接口
+    1) 在关闭打印机电源后20秒以内，即便重新打开电源也不能打印
+
+4.2.6 POSPrinter
+       - 多色阶打印：
+         由于多色阶打印要使用更多的打印数据，通过串行或Ethernet接口打印可
+         能会变得不稳定，且打印结果会出现白色条纹。
+
+4.2.7 Keylock
+       - 尽管在DM-KX060手册中SetupPOS功能已被编档，
+         但当前的SetupPOS并不包括该设置。
+        “键位兼容性模式”将被设置为“UPOS规格”。
+
+4.2.8 LineDisplay
+       - 在DM-D30中，当MarqueeRepeatWait或MarqueeUnitWait的设置低于300毫秒时，
+         将按300毫秒动作。
+
+4.2.9 打印机电源打开时的状态送信
+       - 在已经使用JavaPOS后，当打开打印机电源时，一些打印机被设置传送打印机
+         状态的三个字节到主机。使用该状态以便在打印机电源打开时JavaPOS可以识
+         别。
+
+4.2.10 徽标实用程序(TMFlogo等)
+       - 徽标实用程序不在该软件包中。要上载徽标数据到永久性内存，请使用
+         setBitmap方法，或获取该徽标实用程序。
+
+4.2.11 其他特别说明
+       - 访问数据的权限(仅限Linux)
+         要存储必要的信息，JavaPOS创建一个名为“/var/epson_javapos/pos”的目录。设置
+         “/var/epson_javapos/pos”目录，所有子目录与所有文件的访问权限，
+          以便使用JavaPOS的用户可以写入。
+
+       - 当打印机处于使用状态时，如果计算机进入待机/休眠模式，驱动程序有可能
+         变得不稳定，所以不支持待机/休眠模式。
+
+       - 在SetupPOS上的拖放功能需要GTK 2.10.4或更高版本。
+
+       - 当在SLED 11环境中通过一个终端启动SetupPOS时，将显示GTK-warning。
+         但是，SetupPOS的操作将不受影响。
+
+       -  The location to install the Library files (Linux only)
+         Library文件的默认安装处变更如下。
+         <Current>
+          EPSON JavaPOS ADK 1.13.10 or older (32位): "${JAVA_HOME}/lib/i386"
+          EPSON JavaPOS ADK 1.13.10 or older (64位): "${JAVA_HOME}/lib/amd64"
+         <New>
+          EPSON JavaPOS ADK 1.13.11 or later (32位/64位): "/opt/EpsonJavaPOS/bin"
+         但是，若安装时在“Set User Classpath”的设定中选择了Java的文件夹
+         ("${JAVA_HOME}/lib/ext")，则没有变更。
+
+4.3 修订历史记录
+    [1.14.2版本]
+        - 已添加支持TM-T88VI。
+        - TM-T88VI和TM-m30的支持复数接口的打印。
+        - TM-U950所支持的接口中追加了USB。
+        - DM-D110的支持端口中追加了以太网、蓝牙。
+        - DM-D210的支持端口中追加了以太网、蓝牙。
+        - DM-D30的支持端口中追加了以串行。
+        - DM-D30支持独立连接。(仅限Windows)
+        - 复数打印机同时打印时不能正确打印的问题已对应。
+        - 驱动初始化时电池的状态发生改变导致初始化失败的问题已对应。
+    [1.14.1版本]
+        - 已添加支持TM-m10。
+        - 已添加支持TM-m30。
+        - 已添加支持DM-D30。
+        - 已添加支持Windows 10 (32位)，Windows 10 (64位)。
+
+      * 注意
+        TM-m10和TM-m30不支持使用多个接口的打印。
+        DM-D30不支持独立连接。
+    [1.14版本]
+        - 支持UPOS 1.14版
+        - 对应了蜂鸣器发出蜂鸣声后不能退出离线状态的问题
+        - 改进了条码的算法
+        - 对应了MICR解析中将BankNumber误解为MoneyOrder的问题
+        - 支持P80AC（TM-P80自动切纸型号 ）
+        - 支持P80AC（TM-P80-42C自动切纸型号 ）
+        - 已添加支持TM-L90LinerFree。
+    [1.13.20版本]
+       - 問題修改
+       - 已添加支持TM-P60II。(Linux)
+       - 已添加支持TM-P60IIPEELER。(Linux)
+       - 已添加支持TM-P80。(Linux)
+       - 已添加支持TM-P80-42C。(Linux)
+       - 已添加支持TM-P20。(Linux)
+    [1.13.19版本]
+       - 已添加支持TM-P20。
+    [1.13.17版本]
+      (1)POSPrinter
+       - TM-T20II所支持的接口中追加了蓝牙。
+       - TM-T20II-42C所支持的接口中追加了蓝牙。
+       - TM-T88V所支持的接口中追加了蓝牙。
+       - TM-T70II所支持的接口中追加了蓝牙。
+      (2)CashDrawer
+       - CashDrawer所支持的接口中追加了蓝牙
+    [1.13.15版本]
+       - 已添加支持Windows 8.1 (32位)，Windows 8.1 (64位)，
+         及Windows Server 2012 R2 (64位)。
+       - 可以提供TM-T82的自动纸张节约功能了。
+       - 可以提供TM-T82-42C的自动纸张节约功能了。
+    [1.13.14版本]
+       - 已添加支持TM-P80。
+       - 已添加支持TM-P80-42C。
+    [1.13.13版本]
+       - 已添加支持TM-T20II。
+       - 已添加支持TM-T20II-42C。
+    [1.13.11版本]
+       - 已添加支持Java SE 7。
+       - Library文件的安装处已变更。(仅限Linux)
+       - TM-L90訓悶嶄猟侏(GB18030)催厮瓜耶紗葎瓜屶隔議譜姥。
+       - 辛參戻工TM-L90議徭強崕嫖准埃孔嬬阻。
+       - 弖紗訳鷹GS1, Composite, Datamatrix, Micro QR憲催。(叙TM-L90)
+    [1.13.10版本]
+     短嗤延晒
+    [1.13.9版本]
+     (1)POSPrinter
+       - 已添加支持TM-T70II。
+    [1.13.8版本]
+       - 已添加支持TM-P60IIPEELER。
+    [1.13.7版本]
+       - 已添加支持Windows 8 (32位)，Windows 8 (64位)，及Windows Server 2012 (64位)。
+       - 已添加支持TM-T82II。
+       - 已添加支持TM-T82II-42C。
+    [1.13.6版本]
+     (1)POSPrinter
+       - 已添加支持TM-P60II。
+    [1.13.3版本]
+     短嗤延晒
+    [1.13.2版本]
+     (1)POSPrinter
+       - TM-T81II的支持端口中追加了以太网。
+    [1.13版本]
+      (1)基于UPOS V1.12, V1.13版本的新功能如下所示
+         POSPrinter：
+            - 追加ESC指令功能
+             ESC星号指令的功能
+             删除线功能
+            - 追加条码GS1，QR常数符号
+      (2)SetupPOS
+        - 改变USB接口的设置方法。
+        - 该设备可以测试SetupPOS。
+      (3)POS打印机（POSPrinter）
+        - 追加了可通过DirectIOEvent通知ESC / POS命令的响应类型。
+        - 取消了在非易失性内存（NVRAM）上注册图像数量的限制。
+
+      特别说明:上述变化是以下类别和设备。
+          类别：POSPrinter,MICR,CheckScanner,LineDisplay,CashDrawer
+          设备：TM-H6000II/III/IV,TM-T20,TM-T70,TM-T88III/IV/V,
+                TM-T90,TM-L90,TM-U220
+    [1.11.20版本]
+     (1) POSPrinter
+       - 可以提供TM-T88V的自动纸张节约功能了。
+    [1.11.18版本]
+     (1) POSPrinter
+       - TM-T20的支持端口中追加了以太网。
+       - TM-T20-42C的支持端口中追加了以太网。
+     (2) ElectronicJournal
+       - TM-T20的支持端口中追加了以太网。
+       - TM-T20-42C的支持端口中追加了以太网。
+    [1.11.17版本]
+     (1) POSPrinter
+       仅安装JavaPOS 1.11.17 TM-T82:
+        - 支持TM-T82型号南亚字符。
+        - 支持TM-T82-42C型号南亚字符。
+        - TM-T82的支持端口中追加了以太网。
+        - TM-T82-42C的支持端口中追加了以太网。
+    [1.11.16版本]
+     (1) 通用
+       - 已添加支持Windows 7 SP1 (32位)，Windows 7 SP1 (64位)，及Windows 
+         Server 2008 R2 SP1 (64位)。
+     (2) POSPrinter
+       - TM-H6000IV多国语字符型号已被添加为被支持的设备。
+    [1.11.15版本]
+     (1) POSPrinter
+       - 已添加支持TM-T82。
+       - 已添加支持TM-T82-42C。
+    [1.11.14版本]
+     (1) 通用
+       - 已添加支持Red Hat Enterprise Linux 5.3 (64位)。
+       - 已添加支持SuSE Linux Enterprise 11 (64位)。
+       - 已添加支持Windows Embedded Standard 7 (32位)。
+       - 已添加支持Windows Embedded Standard 7 (64位)。
+     (2) POSPrinter
+       - 已添加支持TM-H6000IV。
+       - 已添加支持TM-H2000。
+       - 已添加支持TM-T81。
+     (3) MICR
+       - 已添加支持TM-H6000IV。
+       - 已添加支持TM-H2000。
+     (4) ElectronicJournal
+       - 已添加支持TM-H6000IV。
+    [1.11.13版本]
+     (1) 通用
+       - 已添加支持Windows Vista (64位)，Windows 7 (64位)，
+         Windows Server 2008 R2 (64位)，Red Hat Enterprise Linux 5.3 (32位)，
+         及SuSE Linux Enterprise 11 (32位)。
+       - 已删除支持Red Hat Linux 9 (32位)，
+         Red Hat Enterprise Linux 5 (32位)及SuSE Linux Enterprise 10 SP1 (32位)
+     (2) POSPrinter
+       - 已添加支持以串行连接的TM-T20。
+       - 已添加支持以串行连接的TM-T20-42C。
+     (3) ElectronicJournal
+       - 已添加支持以串行连接的TM-T20。
+       - 已添加支持以串行连接的TM-T20-42C。
+    [1.11.12版本]
+     (1) POSPrinter
+       - 已添加支持TM-T88V(简体中文(GB18030)型号)。
+       - 已添加支持TM-T88V(繁体中文型号)。
+       - 已添加支持TM-T20。
+       - 已添加支持TM-T20-42C。
+       - 已添加多色阶打印功能。(仅限TM-T88V)
+       - 已添加可选的外部蜂鸣器。(仅限TM-T88V)
+       - 已添加一项设置以允许更改默认字符设置。(TM-T20)
+       - 添加支持字符串打印的Unicode。(TM-T20)
+     (2) ElectronicJournal
+       - 已添加支持TM-T20。
+       - 已添加支持TM-T20-42C。
+    [1.11.11版本]
+     (1) 通用
+       - 已添加支持单位软件包。
+       - 已添加支持Windows Server 2008 SP2，Windows Server 2008 R2，
+         Windows Embedded Standard，与Windows 7。
+     (2) POSPrinter
+       - 已添加支持TM-T88V。
+       - 已添加一项设置以允许更改默认字符设置。
+         (仅限TM-T88V)
+       - 添加支持字符串打印的Unicode。(仅限TM-T88V)
+     (3) ElectronicJournal
+       - 已添加支持TM-T88V。
+

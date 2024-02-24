@@ -1,0 +1,1858 @@
+﻿; =====================================================================================================
+; === Panel Section ===================================================================================
+; =====================================================================================================
+[Main]
+Mode=3
+DirMember="./_cdres"
+DefPanelSection="Panel.Main"
+;DefPanelSection="Panel.Opening"
+ReplaceEntry=LANG_PATH
+
+; -----------------------------------------------------------------------------
+; -------- Opening ------------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Opening]
+MainWindow		="0,0,600,371"	,"0,,1","%TMSW_NAME% %TMSW_VER%"
+ScreenColor		="%COLOR_BLACK%"
+;FreeArea.avi		="MOVIE","0,-48,",,,"%DIR_OPENING_AVI%%FILE_OPENING_AVI%,,,",
+Button.Next		=,%RECT_EXIT_BTN%,Font.ButtonB,,%BTN_NEXT%,"Panel.Main",,0x00000000,
+
+; -----------------------------------------------------------------------------
+; -------- Panel.Main ---------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Main]
+MainWindow		="0,0,600,371"	,"0,,1","%TMSW_NAME% %TMSW_VER%"
+ScreenColor		="%COLOR_BLACK%"
+ScreenImage		="%FILE_MAIN_BMP%,%FLG_LTR%"
+TextArea.Copy		="TEXT","15,345,540,70","Font.XSmall,%COLOR_WHITE%","List.Copy",,
+
+TextArea.txtLang	="TEXT","278,232,120,40","Font.Small,%COLOR_WHITE%","List.txtLang",,","
+BoxArea.Lang		="COMBO","409,229,160,150","Font.Small","List.Lang,%DEFAULT_LANG%",,,",",,,"1,"
+
+Button.Menu1		=,%RECT_MENU1_BTN%,Font.Xlarge,,%BTN_INSTALL_NOW%,"Panel.LA",,0x00009000,,,""
+Button.Menu2		=,%RECT_MENU2_BTN%,Font.ButtonB,,%BTN_USERS_GUIDE%,"Panel.Manual",,0x00009000,,,""
+Button.Menu3		=,%RECT_MENU3_BTN%,Font.ButtonB,,%BTN_SUPPORT%,"Panel.Support",,0x00009000,,,""
+Button.Exit		=,%RECT_EXIT_BTN%,Font.ButtonB,,%BTN_EXIT%,"Quit.Act",,0x00001000,,,""
+
+[List.Copy]
+stc1		="%MES_COPYRIGHT%",,,LEFT,""
+
+[List.txtLang]
+stc1	=%MES_LANG%	,,,RIGHT,""
+
+[List.Lang]
+EN		=%LANG_EN%,,"%LCODE_EN%,%LANG_PATH_EN%"
+JA		=%LANG_JA%,,"%LCODE_JA%,%LANG_PATH_JA%",,,".ja"
+FR		=%LANG_FR%,,"%LCODE_FR%,%LANG_PATH_FR%"
+DE		=%LANG_DE%,,"%LCODE_DE%,%LANG_PATH_DE%"
+NL		=%LANG_NL%,,"%LCODE_NL%,%LANG_PATH_NL%"
+IT		=%LANG_IT%,,"%LCODE_IT%,%LANG_PATH_IT%"
+ES		=%LANG_ES%,,"%LCODE_ES%,%LANG_PATH_ES%"
+PT		=%LANG_PT%,,"%LCODE_PT%,%LANG_PATH_PT%"
+TR		=%LANG_TR%,,"%LCODE_TR%,%LANG_PATH_TR%"
+EL		=%LANG_EL%,,"%LCODE_EL%,%LANG_PATH_EL%"
+SL		=%LANG_SL%,,"%LCODE_SL%,%LANG_PATH_SL%"
+HR		=%LANG_HR%,,"%LCODE_HR%,%LANG_PATH_HR%"
+MK		=%LANG_MK%,,"%LCODE_MK%,%LANG_PATH_MK%"
+SR		=%LANG_SR%,,"%LCODE_SR%,%LANG_PATH_SR%"
+DA		=%LANG_DA%,,"%LCODE_DA%,%LANG_PATH_DA%"
+FI		=%LANG_FI%,,"%LCODE_FI%,%LANG_PATH_FI%"
+NO		=%LANG_NO%,,"%LCODE_NO%,%LANG_PATH_NO%"
+SV		=%LANG_SV%,,"%LCODE_SV%,%LANG_PATH_SV%"
+PL		=%LANG_PL%,,"%LCODE_PL%,%LANG_PATH_PL%"
+CS		=%LANG_CS%,,"%LCODE_CS%,%LANG_PATH_CS%"
+HU		=%LANG_HU%,,"%LCODE_HU%,%LANG_PATH_HU%"
+SK		=%LANG_SK%,,"%LCODE_SK%,%LANG_PATH_SK%"
+RO		=%LANG_RO%,,"%LCODE_RO%,%LANG_PATH_RO%"
+BG		=%LANG_BG%,,"%LCODE_BG%,%LANG_PATH_BG%"
+LV		=%LANG_LV%,,"%LCODE_LV%,%LANG_PATH_LV%"
+LT		=%LANG_LT%,,"%LCODE_LT%,%LANG_PATH_LT%"
+ET		=%LANG_ET%,,"%LCODE_ET%,%LANG_PATH_ET%"
+CA		=%LANG_CA%,,"%LCODE_CA%,%LANG_PATH_CA%"
+RU		=%LANG_RU%,,"%LCODE_RU%,%LANG_PATH_RU%"
+UK		=%LANG_UK%,,"%LCODE_UK%,%LANG_PATH_UK%"
+KK		=%LANG_KK%,,"%LCODE_KK%,%LANG_PATH_KK%"
+AR		=%LANG_AR%,,"%LCODE_AR%,%LANG_PATH_AR%"
+FA		=%LANG_FA%,,"%LCODE_FA%,%LANG_PATH_FA%"
+KO		=%LANG_KO%,,"%LCODE_KO%,%LANG_PATH_KO%"
+TH		=%LANG_TH%,,"%LCODE_TH%,%LANG_PATH_TH%",,,".sa"
+SC		=%LANG_SC%,,"%LCODE_SC%,%LANG_PATH_SC%",,,".sc"
+TC		=%LANG_TC%,,"%LCODE_TC%,%LANG_PATH_TC%",,,".tc"
+HK		=%LANG_HK%,,"%LCODE_HK%,%LANG_PATH_HK%",,,".tc"
+VI		=%LANG_VI%,,"%LCODE_VI%,%LANG_PATH_VI%",,,".sa"
+
+; -----------------------------------------------------------------------------
+; -------- TMList.TMSKU (このセクション名は固定です) --------------------------
+; -----------------------------------------------------------------------------
+[TMList.TMSKU]
+US	="0x0000",		; Default SKU
+;TC	="0x0404",		; Traditional Chinese SKU
+;TC	="0x0C04",		; Traditional Chinese SKU
+;SC	="0x0804",		; Simplified Chinese SKU
+;SA	="0x041E",		; South As5a SKU
+;SA	="0x042A",		; South As5a SKU
+;JP	="0x0411",		; Japanese SKU
+
+; -----------------------------------------------------------------------------
+; -------- Panel.LA -----------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.LA]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideLA",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideLASub",,
+FreeArea.htmLA		="HTML1","35,81,528,175",,,"%HTM_LA%,,,",
+TextArea.radLA		="RADIO","37,265,500,20","Font.Medium,%COLOR_BLACK%","List.license,Disagree",,"25,VERT"
+
+;BoxArea.SKU		="LIST","0,0,0,0"	,"Font.XSmall"	,"List.SKUItem,%TMMODEL_SKUCODE%",,0,"0,1","NONE","","0","","%IMG_SWLIST%,%FLG_LTR%"
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"DiagSoftware.Act,Panel.InstallMain"	,,0x00000008,AND,"List.license.Agree,List.SKUItem"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"DiagSoftware.Act,Panel.InstallMain"	,,0x00000000,AND,"List.license.Agree"
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitLAConfirm.Act,Panel.Main"				,,0x00000000,,
+
+[List.GuideLA]
+stc1		="%MES_LA%",,,LEFT,""
+
+[List.GuideLASub]
+stc1		="%MES_LA_SUB%",,,LEFT,""
+
+[List.license]
+Agree		=%MES_AGREE%,,,LEFT,""
+Disagree	=%MES_DISAGREE%,,,LEFT,""
+
+[Panel.LA.tc]
+BaseSection		="Panel.LA"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"DiagSoftware.Act.tc,Panel.InstallMain.tc"	,,0x00000000,AND,"List.license.Agree"
+
+[Panel.LA.sc]
+BaseSection		="Panel.LA"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"DiagSoftware.Act.sc,Panel.InstallMain.sc"	,,0x00000000,AND,"List.license.Agree"
+
+[Panel.LA.sa]
+BaseSection		="Panel.LA"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"DiagSoftware.Act.sa,Panel.InstallMain.sa"	,,0x00000000,AND,"List.license.Agree"
+
+[Panel.LA.ja]
+BaseSection		="Panel.LA"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"DiagSoftware.Act.ja,Panel.InstallMain.ja"	,,0x00000000,AND,"List.license.Agree"
+
+; -----------------------------------------------------------------------------
+; -------- Panel.InstallMain --------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.InstallMain]
+MainWindow		=,"0,,0",
+;AddImage		="%FILE_BACK_WIN7%,%FLG_LTR%","280,133"
+PanelSetting		=INST_SETTING,0
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideIM",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideIMSub",,
+TextArea.GuideE		="TEXT","255,127,370,70","Font.MediumB,%COLOR_BLACK%","List.GuideIMEasy",,
+TextArea.GuideESub	="TEXT","270,151,370,70","Font.XSmall,%COLOR_BLACK%","List.GuideIMEasySub",,
+TextArea.GuideC		="TEXT","255,230,370,70","Font.MediumB,%COLOR_BLACK%","List.GuideIMCustom",,
+TextArea.GuideCSub	="TEXT","270,254,370,70","Font.XSmall,%COLOR_BLACK%","List.GuideIMCustomSub",,
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath",,0,",","NONE","",0,"",""
+
+;BoxArea.SKU		="LIST","0,0,0,0"	,"Font.XSmall"	,"List.SKUItem,%TMMODEL_SKUCODE%",,0,"0,1","NONE","","0","","%IMG_SWLIST%,%FLG_LTR%"
+;[T20II Desc Start]
+Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,TMConfirm.Act,SetPort.USB",,0x00000008,OR,"List.SKUItem","%BTN_BMP_INST%,%FLG_LTR%"
+Button.Custom	        =,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,CustomInstall.TM",,0x00000008,OR,"List.SKUItem","%BTN_BMP_LIST%,%FLG_LTR%"
+;Button.Easy	=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,SKUChoice.Common",,0x00000000,,,"%BTN_BMP_INST%,%FLG_LTR%"
+;Button.Custom	        =,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,SKUChoice.CustomPath",,0x00000000,,,"%BTN_BMP_LIST%,%FLG_LTR%"
+;[T20II Desc End]
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,""	,,0x00000004,,""
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+;[Panel.InstallMain.sku.us]
+;MainWindow		=,"0,,0",
+;AddImage		="%FILE_BACK_WIN7%,%FLG_LTR%","280,133","%FILE_BACK_WINVISTA%,%FLG_LTR%","362,145","%FILE_BACK_WINLOGO%,%FLG_LTR%","480,130"
+;PanelSetting		=INST_SETTING,0
+
+;TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideIM",,
+;TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideIMSub",,
+;TextArea.GuideE		="TEXT","255,80,370,70","Font.MediumB,%COLOR_BLACK%","List.GuideIMEasy",,
+;TextArea.GuideESub	="TEXT","270,104,370,70","Font.XSmall,%COLOR_BLACK%","List.GuideIMEasySub",,
+;TextArea.GuideC		="TEXT","255,220,370,70","Font.MediumB,%COLOR_BLACK%","List.GuideIMCustom",,
+;TextArea.GuideCSub	="TEXT","270,244,370,70","Font.XSmall,%COLOR_BLACK%","List.GuideIMCustomSub",,
+;BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath",,0,",","NONE","",0,"",""
+
+;Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act.sku.us,TMConfirm.Act.sku.us,SetPort.USB.sku.us",,0x00000000,OR,,"%BTN_BMP_INST%,%FLG_LTR%"
+;Button.Custom	        =,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act.sku.us,CustomInstall.TM.sku.us",,0x00000000,OR,,"%BTN_BMP_LIST%,%FLG_LTR%"
+;Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,""	,,0x00000004,,""
+;Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+;[Panel.InstallMain.sku.ja]
+;MainWindow		=,"0,,0",
+;AddImage		="%FILE_BACK_WIN7%,%FLG_LTR%","280,133","%FILE_BACK_WINVISTA%,%FLG_LTR%","362,145","%FILE_BACK_WINLOGO%,%FLG_LTR%","480,130"
+;PanelSetting		=INST_SETTING,0
+
+;TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideIM",,
+;TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideIMSub",,
+;TextArea.GuideE		="TEXT","255,80,370,70","Font.MediumB,%COLOR_BLACK%","List.GuideIMEasy",,
+;TextArea.GuideESub	="TEXT","270,104,370,70","Font.XSmall,%COLOR_BLACK%","List.GuideIMEasySub",,
+;TextArea.GuideC		="TEXT","255,220,370,70","Font.MediumB,%COLOR_BLACK%","List.GuideIMCustom",,
+;TextArea.GuideCSub	="TEXT","270,244,370,70","Font.XSmall,%COLOR_BLACK%","List.GuideIMCustomSub",,
+;BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath",,0,",","NONE","",0,"",""
+
+;Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act.sku.ja,TMConfirm.Act.sku.ja,SetPort.USB.sku.ja",,0x00000000,OR,,"%BTN_BMP_INST%,%FLG_LTR%"
+;Button.Custom	        =,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act.sku.ja,CustomInstall.TM.sku.ja",,0x00000000,OR,,"%BTN_BMP_LIST%,%FLG_LTR%"
+;Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,""	,,0x00000004,,""
+;Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+
+[List.GuideIM]
+stc1		="%MES_INSTALL_MAIN%",,,LEFT,""
+
+[List.GuideIMSub]
+stc1		="%MES_INSTALL_MAIN_SUB%",,,LEFT,""
+
+[List.GuideIMEasy]
+stc1		="%MES_INSTALL_MAIN_EASY%",,,LEFT,""
+
+[List.GuideIMEasySub]
+stc1		="%MES_INSTALL_MAIN_EASY_SUB%",,,LEFT,""
+
+[List.GuideIMCustom]
+stc1		="%MES_INSTALL_MAIN_CUSTOM%",,,LEFT,""
+
+[List.GuideIMCustomSub]
+stc1		="%MES_INSTALL_MAIN_CUSTOM_SUB%",,,LEFT,""
+
+[Panel.InstallMain.tc]
+BaseSection		="Panel.InstallMain"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.tc",,0,",","NONE","",0,"",""
+Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,TMPolling.Act.tc",,0x00000000,,,"%BTN_BMP_INST%,%FLG_LTR%"
+Button.Custom		=,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,SKUChoice.CustomPath",,0x00000000,,,"%BTN_BMP_LIST%,%FLG_LTR%"
+
+[Panel.InstallMain.sc]
+BaseSection		="Panel.InstallMain"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.sc",,0,",","NONE","",0,"",""
+Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,TMPolling.Act.sc",,0x00000000,,,"%BTN_BMP_INST%,%FLG_LTR%"
+Button.Custom		=,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,SKUChoice.CustomPath",,0x00000000,,,"%BTN_BMP_LIST%,%FLG_LTR%"
+
+[Panel.InstallMain.sa]
+BaseSection		="Panel.InstallMain"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.sa",,0,",","NONE","",0,"",""
+Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,TMPolling.Act.sa",,0x00000000,,,"%BTN_BMP_INST%,%FLG_LTR%"
+Button.Custom		=,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,SKUChoice.CustomPath",,0x00000000,,,"%BTN_BMP_LIST%,%FLG_LTR%"
+
+[Panel.InstallMain.ja]
+BaseSection		="Panel.InstallMain"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.ja",,0,",","NONE","",0,"",""
+Button.Easy		=,%RECT_EASY_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,TMPolling.Act.ja",,0x00000000,,,"%BTN_BMP_INST%,%FLG_LTR%"
+Button.Custom		=,%RECT_CUSTOM_BTN%,Font.ButtonB,,,"TMUSBInstall.Act,SKUChoice.CustomPath",,0x00000000,,,"%BTN_BMP_LIST%,%FLG_LTR%"
+
+; -----------------------------------------------------------------------------
+; ---------- SKU Choice Panel Common ------------------------------------------
+; -----------------------------------------------------------------------------
+[SKUChoice.Common]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+AddImage		=%FILE_FINISH%,"0,61"
+PanelSetting		=DEFAULT,0
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","SKUList.GuideMain",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","SKUList.GuideSub",,
+TextArea.GuideDesc	="TEXT","173,226,392,48","Font.XSmall,%COLOR_BLACK%","SKUList.GuideDesc",,
+BoxArea.SKU		="LIST",%RECT_LIST_SKUPOS%	,"Font.XSmall"	,"List.SKUItem,%TMMODEL_SKUCODE%",,1,"0,1","NONE","","0","","%IMG_SWLIST%,%FLG_LTR%"
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,DiagPortConfig.Act,SetPort.USB"	,,0x00000000,OR,"List.SKUItem"
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+[SKUList.GuideMain]
+stc1		="%MES_SKUSEL%",,,LEFT,""
+
+[SKUList.GuideSub]
+stc1		="%MES_SKUSEL_SUB%",,,LEFT,""
+
+[SKUList.GuideDesc]
+stc1		="%MES_SKUSEL_DESC%",,,LEFT,""
+
+[List.SKUItem]
+;
+;このエントリ名は[TMList.TMSKU]セクションの定義に一致させなければなりません.
+US		="%SKU_ITEM_EN%"	,,"%LCODE_EN%,,%SKU_CODE_EN%",%TIP_SKU_EN%		,,".sku.us",1,1,",",,,,,,",",,,,	; English(ANK)　Model
+;[T20II Desc Start]
+;TC		="%SKU_ITEM_TC%"	,,"%LCODE_TC%,,%SKU_CODE_TC%",%TIP_SKU_TC%		,,".sku.tc",1,1,",",,,,,,",",,,,	; TC　Model
+;SC		="%SKU_ITEM_SC%"	,,"%LCODE_SC%,,%SKU_CODE_SC%",%TIP_SKU_SC%		,,".sku.sc",1,1,",",,,,,,",",,,,	; SC　Model
+;SA		="%SKU_ITEM_SA%"	,,"%LCODE_TH%,,%SKU_CODE_SA%",%TIP_SKU_SA%		,,".sku.sa",1,1,",",,,,,,",",,,,	; South Asia(TH/VT)　Model
+;JP		="%SKU_ITEM_JA%"	,,"%LCODE_JA%,,%SKU_CODE_JA%",%TIP_SKU_JA%		,,".sku.ja",1,1,",",,,,,,",",,,,	; Japanese　Model
+;[T20II Desc End]
+
+; -----------------------------------------------------------------------------
+; -------- Port Configration Panel Checking -----------------------------------
+; -----------------------------------------------------------------------------
+[DiagPortConfig.Act]
+ActionMode	=DIAG
+;DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","Panel.Confirm.CusAndUpd,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WIN2KLATER%","Panel.Confirm.CusAndUpd,%MES_DIAG_OS_ORG%<br>"
+; -----------------------------------------------------------------------------
+; ---------- SKU Choice List(Skip Connection) ---------------------------------
+; -----------------------------------------------------------------------------
+[SKUChoice.EasySkip]
+BaseSection		="SKUChoice.Common"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath",,0,",","NONE","",0,"",""
+
+[SKUChoice.EasySkip.tc]
+BaseSection		="SKUChoice.Common"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.tc",,0,",","NONE","",0,"",""
+
+[SKUChoice.EasySkip.sc]
+BaseSection		="SKUChoice.Common"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.sc",,0,",","NONE","",0,"",""
+
+[SKUChoice.EasySkip.sa]
+BaseSection		="SKUChoice.Common"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.sa",,0,",","NONE","",0,"",""
+
+[SKUChoice.EasySkip.ja]
+BaseSection		="SKUChoice.Common"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="LIST"	,%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.EasyPath.ja",,0,",","NONE","",0,"",""
+
+; -----------------------------------------------------------------------------
+; ---------- SKU Choice List(CustomInstall) -----------------------------------
+; -----------------------------------------------------------------------------
+[SKUChoice.CustomPath]
+BaseSection		="SKUChoice.Common"
+BoxArea.SKU		="LIST",%RECT_LIST_SKUPOS%	,"Font.XSmall"	,"List.SKUItem,%TMMODEL_SKUCODE%",,1,"0,1","NONE","",0,"","%IMG_SWLIST%,%FLG_LTR%"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"CustomInstall.TM"	,,0x00000008,OR,"List.SKUItem"
+
+; -----------------------------------------------------------------------------
+; ---------- SKU Choice List(Update Mode) -------------------------------------
+; -----------------------------------------------------------------------------
+[SKUChoiceList.UpdetePath]
+BaseSection		="SKUChoice.Common"
+BoxArea.SKU		="LIST",%RECT_LIST_SKUPOS%	,"Font.XSmall"	,"List.SKUItem,%TMMODEL_SKUCODE%",,1,"0,1","NONE","",0,"","%IMG_SWLIST%,%FLG_LTR%"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"MsgStore.CIUpd.Act,DiagCIUpdPanel.Act,CustomInstallOnUpd.TM"	,,0x00000008,OR,"List.SKUItem"	; TMUSB is not installed.
+
+; -----------------------------------------------------------------------------
+; ---------- SKU Choice List(Update Mode) -------------------------------------
+; -----------------------------------------------------------------------------
+[SKUChoiceList.UpdetePath.NoList]
+BaseSection		="SKUChoice.Common"
+BoxArea.SKU		="LIST",%RECT_LIST_STDPOS%	,"Font.XSmall"	,"List.SKUItem,%TMMODEL_SKUCODE%",,1,"0,1","NONE","",0,"","%IMG_SWLIST%,%FLG_LTR%"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"MsgStore.CIUpd.Act,DiagCIUpdPanel.Act,CustomInstallOnUpd.TM"	,,0x00000008,OR,"List.SKUItem"	; TMUSB is not installed.
+
+[QuitConfirm.Act]
+ActionMode	=DIALOG
+DialogSetting	=%MES_LICENSE_CONFIRM%,",0x00000000",",0x00000003"
+
+[QuitLAConfirm.Act]
+ActionMode	=DIALOG
+DialogSetting	=%MES_LICENSE_CONFIRM%,",0x00000030",",0x00000003"
+
+; -----------------------------------------------------------------------------
+; -------- Software Installed Checking ----------------------------------------
+; -----------------------------------------------------------------------------
+[Diag.Act]
+ActionMode			=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+
+; -----------------------------------------------------------------------------
+; -------- Software Installed Checking ----------------------------------------
+; -----------------------------------------------------------------------------
+[DiagSoftware.Act]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_EN%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSNET	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.TMVPD	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_EN%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+; 以下、アップデートリストに表示されないソフトウェアの検出操作.
+;DiagCheckItem.APDMAN	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_APDMAN%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.DNETFW	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_DNETFW%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.POSDNET	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_POSDNET%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.JRE	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_JRE%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.JAI	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_JAI%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.TMUTIL	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_TMUTIL%","SKUChoiceList.UpdetePath.NoList.SKU,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.TMNETWC	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_TMNETWC%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.EPNETSV	=0xFFFFFFFF,4,"DIAG_UNDETECT,%DIAGSW_EPNETSV%","SKUChoiceList.UpdetePath.NoList,%MES_DIAG_SWDETECT%<br>"
+
+;[DiagSoftware.Act.sku.us]
+;ActionMode	=DIAG
+;DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+;DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+;DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_EN%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.OPOSNET	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.TMVPD	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_EN%","DriverUpdate.List,%MES_DIAG_SWDETECT%<br>"
+
+;[DiagSoftware.Act.sku.ja]
+;ActionMode	=DIAG
+;DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+;DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+;DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List.sku.ja,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_JA%","DriverUpdate.List.sku.ja,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.OPOSNET	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List.sku.ja,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List.sku.ja,%MES_DIAG_SWDETECT%<br>"
+;DiagCheckItem.TMVPD	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_JA%","DriverUpdate.List.sku.ja,%MES_DIAG_SWDETECT%<br>"
+
+
+[DiagSoftware.Act.tc]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List.tc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_EN%","DriverUpdate.List.tc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSNET	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List.tc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List.tc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.TMVPD	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_EN%","DriverUpdate.List.tc,%MES_DIAG_SWDETECT%<br>"
+
+[DiagSoftware.Act.sc]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List.sc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_EN%","DriverUpdate.List.sc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSNET	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List.sc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List.sc,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.TMVPD	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_EN%","DriverUpdate.List.sc,%MES_DIAG_SWDETECT%<br>"
+
+[DiagSoftware.Act.sa]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List.sa,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_EN%","DriverUpdate.List.sa,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSNET	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List.sa,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List.sa,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.TMVPD	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_EN%","DriverUpdate.List.sa,%MES_DIAG_SWDETECT%<br>"
+
+[DiagSoftware.Act.ja]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%DIAG_CHECK_OS%","Panel.Fatal,%MES_DIAG_OS_ORG%<br>"
+DiagCheckItem.Admin	=0xFFFFFFFF,2,"DIAG_ADMIN,","Panel.Fatal,%MES_DIAG_ADMIN_ORG%<br>"
+DiagCheckItem.APD4	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_APD4%,%DIR_APD4%","DriverUpdate.List.ja,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_OPOSADK%,%DIR_OPOSADK_JA%","DriverUpdate.List.ja,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.OPOSNET	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_OPOSNET%,%DIR_OPOSNET%","DriverUpdate.List.ja,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.JPOSADK	=0xFFFFFFFF,3,"DIAG_UNDETECT,%DIAGSW_JPOSADK%,%DIR_JPOSADK%","DriverUpdate.List.ja,%MES_DIAG_SWDETECT%<br>"
+DiagCheckItem.TMVPD	=0xFFFFFFFC,3,"DIAG_UNDETECT,%DIAGSW_TMVPD%,%DIR_TMVPD_JA%","DriverUpdate.List.ja,%MES_DIAG_SWDETECT%<br>"
+
+; -----------------------------------------------------------------------------
+; -------- System Check -------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Fatal]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuidErr",,
+FreeArea.htmLA		="HTML2","35,81,528,175",,,"%DIAG_ERR_REPORT%%MES_DIAG_CLOSE%,,",
+Button1.Exit		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_EXIT%,"Quit.Act",,0x00000001,,"
+
+[List.GuidErr]
+stc1		=%MES_SYS_ERR%	,,,"left",""
+
+; -----------------------------------------------------------------------------
+; -------- Software Updating List ---------------------------------------------
+; -----------------------------------------------------------------------------
+[DriverUpdate.List]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+AddImage		=%FILE_FINISH%,"0,61"
+PanelSetting		=INST_SETTING,0
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideUpdIns",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideUpdInsSub",,
+TextArea.DescList	="TEXT","172,63,424,28","Font.XSmall,%COLOR_BLACK%","List.DrvUpdDesc",,
+BoxArea.App1		="TMLIST"	,%RECT_LIST_DRVUPDATE%	,"Font.XSmall"	,"List.UpdateMode.TM",,1,"1,","NONE","",0,"%COL_SWNAME%,%COL_CUR%,%COL_AFTER%",""
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"MsgStore.CIUpd.Act,DiagCIUpdPanel.Act,CustomInstallOnUpd.TM"	,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"SKUChoiceList.UpdetePath"	,,0x00000000,,
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+;[DriverUpdate.List.sku.ja]
+;MainWindow		=,"0,,0",
+;ScreenColor		="255,255,255"
+;ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+;AddImage		=%FILE_FINISH%,"0,61"
+;PanelSetting		=INST_SETTING,0
+
+;TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideUpdIns",,
+;TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideUpdInsSub",,
+;TextArea.DescList	="TEXT","172,63,424,28","Font.XSmall,%COLOR_BLACK%","List.DrvUpdDesc",,
+;BoxArea.App1		="TMLIST"	,%RECT_LIST_DRVUPDATE%	,"Font.XSmall"	,"List.UpdateMode.TM.sku.ja",,1,"1,","NONE","",0,"%COL_SWNAME%,%COL_CUR%,%COL_AFTER%",""
+
+;Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"MsgStore.CIUpd.Act.Act.sku.ja,DiagCIUpdPanel.Act.sku.ja,CustomInstallOnUpd.TM.sku.ja"	,,0x00000000,,
+;Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+[List.GuideUpdIns]
+stc1		="%MES_UPDINS%",,,LEFT,""
+
+[List.GuideUpdInsSub]
+stc1		="%MES_UPDINS_SUB%",,,LEFT,""
+
+[List.DrvUpdDesc]
+stc1		="%MES_DRVUPDATE%",,,LEFT,""
+
+[DriverUpdate.List.tc]
+BaseSection="DriverUpdate.List"
+BoxArea.App1		="TMLIST"	,%RECT_LIST_DRVUPDATE%	,"Font.XSmall"	,"List.UpdateMode.TM.tc",,1,"1,","NONE","",0,"%COL_SWNAME%,%COL_CUR%,%COL_AFTER%",""
+
+[DriverUpdate.List.sc]
+BaseSection="DriverUpdate.List"
+BoxArea.App1		="TMLIST"	,%RECT_LIST_DRVUPDATE%	,"Font.XSmall"	,"List.UpdateMode.TM.sc",,1,"1,","NONE","",0,"%COL_SWNAME%,%COL_CUR%,%COL_AFTER%",""
+
+[DriverUpdate.List.sa]
+BaseSection="DriverUpdate.List"
+BoxArea.App1		="TMLIST"	,%RECT_LIST_DRVUPDATE%	,"Font.XSmall"	,"List.UpdateMode.TM.sa",,1,"1,","NONE","",0,"%COL_SWNAME%,%COL_CUR%,%COL_AFTER%",""
+
+[DriverUpdate.List.ja]
+BaseSection="DriverUpdate.List"
+BoxArea.App1		="TMLIST"	,%RECT_LIST_DRVUPDATE%	,"Font.XSmall"	,"List.UpdateMode.TM.ja",,1,"1,","NONE","",0,"%COL_SWNAME%,%COL_CUR%,%COL_AFTER%",""
+
+[List.UpdateMode.TM]
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,		; "APD4"
+;SWID_APD3		="%DIAGSW_APD3%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,		; "APD3"
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_OPOSADK		="%DIAGSW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,1,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,		; "OPOS ADK"
+SWID_OPOSNET		="%DIAGSW_OPOSNET%"	,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,1,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,		; "OPOS ADK for .NET"
+SWID_JPOSADK		="%DIAGSW_JPOSADK%"	,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,1,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,		; "Java POS ADK"
+SWID_TMVPD		="%DIAGSW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,1,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,		; "TM Virtual Port Driver"
+; 以下、アップデートリストに表示されないソフトウェアの定義.
+;SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD,1,1,",",%MB_APDMAN%	,%DIR_APD%%EXE_APDMAN%		,,%CTRL__APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%	,%OP2_APDMAN_C%",,,,		; "Simple and Manual"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",,1,1,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL__DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",,1,1,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL__POSDNET%,,"%%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,		; "Microsoft POS for .NET"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",,1,1,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL__JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",,1,1,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL__JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,		; "Java Advanced Imaging"
+;SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL__TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,		; "TMNet Utility"
+;SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,1,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL__TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,		; "TMNet WinConfig"
+;SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,1,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_EPNETSV%		,,%CTRL__EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,		; "EpsonNet SimpleViewer"
+
+;[List.UpdateMode.TM.sku.ja]
+;SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,		; "APD4"
+;SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+;SWID_OPOSADK		="%DIAGSW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK%",,1,1,",",%MB_OPOSADK%	,%DIR_OPOSADK_JA%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,		; "OPOS ADK"
+;SWID_OPOSNET		="%DIAGSW_OPOSNET%"	,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,1,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,		; "OPOS ADK for .NET"
+;SWID_JPOSADK		="%DIAGSW_JPOSADK%"	,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,1,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,		; "Java POS ADK"
+;SWID_TMVPD		="%DIAGSW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,1,",",%MB_TMVPD%	,%DIR_TMVPD_JA%%EXE_TMVPD_JA%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,		; "TM Virtual Port Driver"
+
+
+[List.UpdateMode.TM.tc]
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,		; "APD4"
+;SWID_APD3		="%DIAGSW_APD3%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,		; "APD3"
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_OPOSADK		="%DIAGSW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,1,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,		; "OPOS ADK"
+SWID_OPOSNET		="%DIAGSW_OPOSNET%"	,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,1,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,		; "OPOS ADK for .NET"
+SWID_JPOSADK		="%DIAGSW_JPOSADK%"	,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,1,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,		; "Java POS ADK"
+SWID_TMVPD		="%DIAGSW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,1,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,		; "TM Virtual Port Driver"
+
+[List.UpdateMode.TM.sc]
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,		; "APD4"
+;SWID_APD3		="%DIAGSW_APD3%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,		; "APD3"
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_OPOSADK		="%DIAGSW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,1,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,		; "OPOS ADK"
+SWID_OPOSNET		="%DIAGSW_OPOSNET%"	,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,1,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,		; "OPOS ADK for .NET"
+SWID_JPOSADK		="%DIAGSW_JPOSADK%"	,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,1,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,		; "Java POS ADK"
+SWID_TMVPD		="%DIAGSW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,1,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,		; "TM Virtual Port Driver"
+
+[List.UpdateMode.TM.sa]
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,		; "APD4"
+;SWID_APD3		="%DIAGSW_APD3%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,		; "APD3"
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_OPOSADK		="%DIAGSW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,1,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,		; "OPOS ADK"
+SWID_OPOSNET		="%DIAGSW_OPOSNET%"	,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,1,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,		; "OPOS ADK for .NET"
+SWID_JPOSADK		="%DIAGSW_JPOSADK%"	,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,1,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,		; "Java POS ADK"
+SWID_TMVPD		="%DIAGSW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,1,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,		; "TM Virtual Port Driver"
+
+[List.UpdateMode.TM.ja]
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,		; "APD4"
+;SWID_APD3		="%DIAGSW_APD3%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,		; "APD3"
+SWID_APD4		="%DIAGSW_APD4%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_OPOSADK		="%DIAGSW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK%",,1,1,",",%MB_OPOSADK%	,%DIR_OPOSADK_JA%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,		; "OPOS ADK"
+SWID_OPOSNET		="%DIAGSW_OPOSNET%"	,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,1,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,		; "OPOS ADK for .NET"
+SWID_JPOSADK		="%DIAGSW_JPOSADK%"	,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,1,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,		; "Java POS ADK"
+SWID_TMVPD		="%DIAGSW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,1,",",%MB_TMVPD%	,%DIR_TMVPD_JA%%EXE_TMVPD_JA%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,		; "TM Virtual Port Driver"
+
+; -----------------------------------------------------------------------------
+; -------- Software Custom Install Tree List ----------------------------------
+; -----------------------------------------------------------------------------
+[CustomInstall.TM]
+MainWindow		=,"0,,0"
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+AddImage		=,
+PanelSetting		=INST_SETTING,0
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideUpdCho",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideUpdChoSub",,
+
+FreeArea.FrameDesc	="GROUP","385,65,210,230",Font.XSmall,,"%MES_CHODESC%,,,",
+;TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CI.sku.us",,1,"1,","NONE","",0,"",""
+TextArea.txtSpace	="TEXT"	,"385,300,165,20"	,"Font.Xsmall,%COLOR_BLACK%"	,"List.txtSpace",,","
+TextArea.Space		="TEXT"	,"550,300,45,20"	,"Font.Xsmall,%COLOR_BLACK%"	,"List.Space",,","	; This line must be placed following "BoxArea.App1".
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd"	,,0x00000000,OR,"List.CI.sku.us"
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"	,,0x00000000,,
+
+[List.GuideUpdCho]
+stc1		="%MES_UPDCHO%",,,LEFT,""
+
+[List.GuideUpdChoSub]
+stc1		="%MES_UPDCHO_SUB%",,,LEFT,""
+
+[List.CombiDesc]
+stc1		="%MES_COMBIWARNNING%",,,LEFT,""
+
+[List.txtSpace]
+stc1		=%MES_SIZE%,,,RIGHT,""
+
+[List.Space]
+stc1		=%ALLAPP_USE%,,,RIGHT,""
+
+[CustomInstall.TM.sku.us]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+
+[CustomInstall.TM.sku.tc]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CI.sku.tc",,1,"1,","NONE","",0,"",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.tc"	,,0x00000000,OR,"List.CI.sku.tc"
+
+[CustomInstall.TM.sku.sc]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CI.sku.sc",,1,"1,","NONE","",0,"",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.sc"	,,0x00000000,OR,"List.CI.sku.sc"
+
+[CustomInstall.TM.sku.sa]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CI.sku.sa",,1,"1,","NONE","",0,"",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.sa"	,,0x00000000,OR,"List.CI.sku.sa"
+
+[CustomInstall.TM.sku.ja]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CI.sku.ja",,1,"1,","NONE","",0,"",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.ja"	,,0x00000000,OR,"List.CI.sku.ja"
+
+[CustomInstallOnUpd.TM]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.us",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd"	,,0x00000000,OR,"List.CIUpd.sku.us"
+
+[CustomInstallOnUpd.TM.sku.us]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.us",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd"	,,0x00000000,OR,"List.CIUpd.sku.us"
+
+[CustomInstallOnUpd.TM.sku.tc]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.tc",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.tc"	,,0x00000000,OR,"List.CIUpd.sku.tc"
+
+[CustomInstallOnUpd.TM.sku.sc]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.sc",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.sc"	,,0x00000000,OR,"List.CIUpd.sku.sc"
+
+[CustomInstallOnUpd.TM.sku.sa]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.sa",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.sa"	,,0x00000000,OR,"List.CIUpd.sku.sa"
+
+[CustomInstallOnUpd.TM.sku.ja]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.ja",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.ja"	,,0x00000000,OR,"List.CIUpd.sku.ja"
+
+[CustomInstallOnUpd.TM.2k]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc2k",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.us",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd"	,,0x00000000,OR,"List.CIUpd.sku.us"
+
+[CustomInstallOnUpd.TM.sku.us.2k]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc2k",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.us",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd"	,,0x00000000,OR,"List.CIUpd.sku.us"
+
+[CustomInstallOnUpd.TM.sku.tc.2k]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc2k",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.tc",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.tc"	,,0x00000000,OR,"List.CIUpd.sku.tc"
+
+[CustomInstallOnUpd.TM.sku.sc.2k]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc2k",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.sc",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.sc"	,,0x00000000,OR,"List.CIUpd.sku.sc"
+
+[CustomInstallOnUpd.TM.sku.sa.2k]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc2k",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.sa",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.sa"	,,0x00000000,OR,"List.CIUpd.sku.sa"
+
+[CustomInstallOnUpd.TM.sku.ja.2k]
+BaseSection="CustomInstall.TM"
+PanelSetting		=INST_SETTING,0
+TextArea.CombiDesc	="TEXT",%RECT_WARN_DRVUPDATE%,"Font.XSmall,%COLOR_BLACK%","List.CombiDesc2k",,
+BoxArea.App1		="TMTREE"	,%RECT_TREE_DRVUPDATE%	,"Font.XSmall"	,"List.CIUpd.sku.ja",,1,"1,","NONE","","1,MES_COMBIWARNNING,%MES_COMBINATION%","",""
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMConfirm.Act,Panel.Confirm.CusAndUpd.ja"	,,0x00000000,OR,"List.CIUpd.sku.ja"
+
+[List.CombiDesc2K]
+stc1		="%MES_UPDATE_SW_2K%",,,LEFT,""
+
+[MsgStore.CIUpd.Act]
+ActionMode=TMSTOREMSG
+StoreMessge="%MES_COMBIWARNNING%,"
+
+[MsgStore.CIUpd.Act.sku.us]
+ActionMode=TMSTOREMSG
+StoreMessge="%MES_COMBIWARNNING%,"
+
+[MsgStore.CIUpd.Act.sku.tc]
+ActionMode=TMSTOREMSG
+StoreMessge="%MES_COMBIWARNNING%,"
+
+[MsgStore.CIUpd.Act.sku.sc]
+ActionMode=TMSTOREMSG
+StoreMessge="%MES_COMBIWARNNING%,"
+
+[MsgStore.CIUpd.Act.sku.sa]
+ActionMode=TMSTOREMSG
+StoreMessge="%MES_COMBIWARNNING%,"
+
+[MsgStore.CIUpd.Act.sku.ja]
+ActionMode=TMSTOREMSG
+StoreMessge="%MES_COMBIWARNNING%,"
+
+; -----------------------------------------------------------------------------
+; -------- Custom Update Installation Panel OS Checking ------------------------------
+; -----------------------------------------------------------------------------
+[DiagCIUpdPanel.Act]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","CustomInstallOnUpd.TM.2k,%MES_DIAG_OS_ORG%<br>"
+
+[DiagCIUpdPanel.Act.sku.us]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","CustomInstallOnUpd.TM.sku.us.2k,%MES_DIAG_OS_ORG%<br>"
+
+[DiagCIUpdPanel.Act.sku.tc]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","CustomInstallOnUpd.TM.sku.tc.2k,%MES_DIAG_OS_ORG%<br>"
+
+[DiagCIUpdPanel.Act.sku.sc]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","CustomInstallOnUpd.TM.sku.sc.2k,%MES_DIAG_OS_ORG%<br>"
+
+[DiagCIUpdPanel.Act.sku.sa]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","CustomInstallOnUpd.TM.sku.sa.2k,%MES_DIAG_OS_ORG%<br>"
+
+[DiagCIUpdPanel.Act.sku.ja]
+ActionMode	=DIAG
+DiagCheckItem.OS	=,1,"DIAG_OS,%OS_WINXPLATER%","CustomInstallOnUpd.TM.sku.ja.2k,%MES_DIAG_OS_ORG%<br>"
+
+[List.EasyPath]
+;
+;この定義を参照するリストは非表示属性です.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_E%,,"%OP1_APD4_E%	,%OP2_APD4_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_APD4%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_E%	,%OP2_APD4DPINST_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDNAM%		,"%SWVER_APDMAN%",,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_EN%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_E%	,%OP2_APDMAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_EN%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_E%	,%OP2_APD3MAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_E%	,%OP2_OPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_E%	,%OP2_OPOSNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_E%	,%OP2_DNETFW_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_E%	,%OP2_POSDNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_E%	,%OP2_JPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_E%	,%OP2_JRE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_E%	,%OP2_JAI_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_E%	,%OP2_TMUTIL_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMUTIL%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_E%	,%OP2_COUPONGENE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_E%	,%OP2_TMNETWC_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMNETWC%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_E%	,%OP2_EPNETSV_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_EPNETSV%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_E%	,%OP2_TMVPD_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+;SWID_APD3_EN		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%			,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,US",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(EN)"
+;SWID_APD3_TC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,TC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(TC)"
+;SWID_APD3_SC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SC)"
+;SWID_APD3_SA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SA",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SA)"
+;SWID_APD3_JA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,JP",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(JA)"
+
+[List.EasyPath.tc]
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_E%,,"%OP1_APD4_E%	,%OP2_APD4_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_APD4%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_E%	,%OP2_APD4DPINST_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDNAM%		,"%SWVER_APDMAN%",,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_TC%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_E%	,%OP2_APDMAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_TC%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_E%	,%OP2_APD3MAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_E%	,%OP2_OPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_E%	,%OP2_OPOSNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_E%	,%OP2_DNETFW_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_E%	,%OP2_POSDNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_E%	,%OP2_JPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_E%	,%OP2_JRE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_E%	,%OP2_JAI_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_E%	,%OP2_TMUTIL_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMUTIL%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_E%	,%OP2_COUPONGENE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_E%	,%OP2_TMNETWC_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMNETWC%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_E%	,%OP2_EPNETSV_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_EPNETSV%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_E%	,%OP2_TMVPD_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+;SWID_APD3_EN		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%			,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,US",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(EN)"
+;SWID_APD3_TC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,TC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(TC)"
+;SWID_APD3_SC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SC)"
+;SWID_APD3_SA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SA",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SA)"
+;SWID_APD3_JA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,JP",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(JA)"
+
+[List.EasyPath.sc]
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_E%,,"%OP1_APD4_E%	,%OP2_APD4_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_APD4%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_E%	,%OP2_APD4DPINST_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDNAM%		,"%SWVER_APDMAN%",,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_SC%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_E%	,%OP2_APDMAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_SC%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_E%	,%OP2_APD3MAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_E%	,%OP2_OPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_E%	,%OP2_OPOSNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_E%	,%OP2_DNETFW_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_E%	,%OP2_POSDNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_E%	,%OP2_JPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_E%	,%OP2_JRE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_E%	,%OP2_JAI_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_E%	,%OP2_TMUTIL_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMUTIL%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_E%	,%OP2_COUPONGENE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_E%	,%OP2_TMNETWC_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMNETWC%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_E%	,%OP2_EPNETSV_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_EPNETSV%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_E%	,%OP2_TMVPD_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+;SWID_APD3_EN		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%			,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,US",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(EN)"
+;SWID_APD3_TC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,TC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(TC)"
+;SWID_APD3_SC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SC)"
+;SWID_APD3_SA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SA",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SA)"
+;SWID_APD3_JA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,JP",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(JA)"
+
+[List.EasyPath.sa]
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_E%,,"%OP1_APD4_E%	,%OP2_APD4_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_APD4%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_E%	,%OP2_APD4DPINST_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDNAM%		,"%SWVER_APDMAN%",,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_SA%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_E%	,%OP2_APDMAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_SA%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_E%	,%OP2_APD3MAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_E%	,%OP2_OPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_E%	,%OP2_OPOSNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_E%	,%OP2_DNETFW_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_E%	,%OP2_POSDNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_E%	,%OP2_JPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_E%	,%OP2_JRE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_E%	,%OP2_JAI_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_E%	,%OP2_TMUTIL_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMUTIL%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_E%	,%OP2_COUPONGENE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_E%	,%OP2_TMNETWC_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMNETWC%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_E%	,%OP2_EPNETSV_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_EPNETSV%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_E%	,%OP2_TMVPD_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+;SWID_APD3_EN		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%			,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,US",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(EN)"
+;SWID_APD3_TC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,TC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(TC)"
+;SWID_APD3_SC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SC)"
+;SWID_APD3_SA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SA",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SA)"
+;SWID_APD3_JA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,JP",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(JA)"
+
+[List.EasyPath.ja]
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_E%,,"%OP1_APD4_E%	,%OP2_APD4_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_APD4%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_E%	,%OP2_APD4DPINST_E%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDNAM%		,"%SWVER_APDMAN%",,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_JA%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_E%	,%OP2_APDMAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_JA%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_E%	,%OP2_APD3MAN_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_JA%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_E%	,%OP2_OPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_E%	,%OP2_OPOSNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_E%	,%OP2_DNETFW_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_E%	,%OP2_POSDNET_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_E%	,%OP2_JPOSADK_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_E%	,%OP2_JRE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_E%	,%OP2_JAI_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_E%	,%OP2_TMUTIL_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMUTIL%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_E%	,%OP2_COUPONGENE_E%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_E%	,%OP2_TMNETWC_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_TMNETWC%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_E%	,%OP2_EPNETSV_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,%\t%%MES_INSTALL_FOLDER%%\n%,%\t%%\t%%ProgramFiles%\%INSTFDR_SW_EPNETSV%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_JA%%EXE_TMVPD_JA%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_E%	,%OP2_TMVPD_E%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+;SWID_APD3_EN		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%			,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,US",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(EN)"
+;SWID_APD3_TC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,TC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(TC)"
+;SWID_APD3_SC		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SC",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SC)"
+;SWID_APD3_SA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,SA",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(SA)"
+;SWID_APD3_JA		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3_SKU%,,"%OP1_APD3_E%	,%OP2_APD3_E%","%TMMODEL_SKUCODE%,JP",,,,,"USER_CHOICE_CONFIRM3,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3(JA)"
+
+[List.CI.sku.us]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_C%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_EN%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_EN%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+;バックアップ情報として...
+;SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_C%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,%MES_INSTALL_FOLDER%%\n%,%ProgramFiles%\%INSTFDR_SW_APD4%%\n%%\n%,USER_INSTALLED_CONFIRM,",		; "APD4"
+;SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDNAM%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+;SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+;SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSDNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSDNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+;SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+;SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,%MES_INSTALL_FOLDER%%\n%,%ProgramFiles%\%INSTFDR_SW_TMUTIL%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+;SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,%MES_INSTALL_FOLDER%%\n%,%ProgramFiles%\%INSTFDR_SW_TMNETWC%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+;SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,%MES_INSTALL_FOLDER%%\n%,%ProgramFiles%\%INSTFDR_SW_EPNETSV%%\n%%\n%,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+;SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CI.sku.tc]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_C%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_TC%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_TC%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CI.sku.sc]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_C%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_SC%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_SC%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CI.sku.sa]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_C%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_SA%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_SA%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CI.sku.ja]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_C%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,1,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_JA%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_JA%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_JA%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,1,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_JA%%EXE_TMVPD_JA%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CIUpd.sku.us]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+;SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,0,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_EN%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_EN%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,0,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CIUpd.sku.tc]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+;SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,0,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_TC%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_TC%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_TC%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,0,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CIUpd.sku.sc]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+;SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,0,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SC%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_SC%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_SC%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,0,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CIUpd.sku.sa]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+;SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,0,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_SA%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_SA%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_SA%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK_R2%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_EN%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK_R2%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,0,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_EN%%EXE_TMVPD_EN%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+[List.CIUpd.sku.ja]
+;
+;フィールド５は"遷移セクション付加文字列"定義ではなく、項目のバージョン文字列定義となり、リストビューのカラム2に表示されます.
+;
+SWID_APD4		="%SW_APD%"	,%OS_APD4%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4%	,%DIR_APD4%%EXE_APD4%		,,%CTRL_APD4_UD%,,"%OP1_APD4_C%	,%OP2_APD4_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4"
+;SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,1,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD4		="%SW_APD%"	,%OS_APD4DPINST%,,%TIP_APD4%		,"%SWVER_APD4%",,1,0,",",%MB_APD4DPINST%	,%DIR_APD4DPINST%%EXE_APD4DPINST%		,,%CTRL_APD4DPINST%,,"%OP1_APD4DPINST_C%	,%OP2_APD4DPINST_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD4%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD4%%\n%,,",		; "APD4 DPInst"
+SWID_APD3		="%SW_APD%"	,%OS_APD3%,,%TIP_APD3%		,"%SWVER_APD3%",,1,0,",",%MB_APD3%	,%DIR_APD3%%EXE_APD3_JA%		,,%CTRL_APD3_UD%,,"%OP1_APD3_C%	,%OP2_APD3_C%",,,,,,"USER_CHOICE_CONFIRM1,-%SW_APD% %SWVer_APD3%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APD% %SWVer_APD3%%\n%,,",		; "APD3"
+SWID_APDMAN		="%SW_APDMAN%"	,%OS_APDMAN%,,%TIP_APDMAN%		,"%SWVER_APDMAN%",SWID_APD4,1,0,",",%MB_APDMAN%	,%DIR_APD4%%EXE_APDMAN_JA%		,,%CTRL_APDMAN%,,"%OP1_APDMAN_C%	,%OP2_APDMAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN% %SWVer_APDMAN%%\n%,,",		; "Sample and Manual"
+SWID_APDMAN_2K		="%SW_APDMAN_2K%"	,%OS_APDMAN_2K%,,%TIP_APDNAM_2K%	,"%SWVER_APDMAN_2K%",SWID_APD3,1,0,",",%MB_APD3MAN%	,%DIR_APD3%%EXE_APD3MAN_JA%		,,%CTRL_APD3MAN%,,"%OP1_APD3MAN_C%	,%OP2_APD3MAN_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_APDMAN_2K% %SWVer_APDMAN_2K%%\n%,,",		; "APD3 Manual"
+SWID_OPOSADK		="%SW_OPOSADK%"	,%OS_OPOSADK%,,%TIP_OPOSADK%		,"%SWVER_OPOSADK%",,1,0,",",%MB_OPOSADK%	,%DIR_OPOSADK_JA%%EXE_SETUP%		,,%CTRL_OPOSADK%,,"%OP1_OPOSADK_C%	,%OP2_OPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSADK% %SWVer_OPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSADK% %SWVer_OPOSADK%%\n%,,",		; "OPOS ADK"
+SWID_OPOSNET		="%SW_OPOSNET%"		,%OS_OPOSNET%,,%TIP_OPOSNET%		,"%SWVER_OPOSNET%",,1,0,",",%MB_OPOSNET%	,%DIR_OPOSNET%%EXE_SETUP%		,,%CTRL_OPOSNET%,,"%OP1_OPOSNET_C%	,%OP2_OPOSNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_OPOSNET% %SWVer_OPOSNET%%\n%,,",		; "OPOS ADK for .NET"
+;SWID_DNETFW		="%SW_DNETFW%"	,%OS_DNETFW%,,%TIP_DNETFW%		,"%SWVER_DNETFW%",SWID_OPOSNET,1,0,",",%MB_DNETFW%	,%DIR_DNETFW%%EXE_DNETFW%		,,%CTRL_DNETFW%,,"%OP1_DNETFW_C%	,%OP2_DNETFW_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_DNETFW% %SWVer_DNETFW%%\n%,,",		; "Microsoft .NET Framework"
+;SWID_POSDNET		="%SW_POSDNET%"	,%OS_POSDNET%,,%TIP_POSDNET%		,"%SWVER_POSDNET%",SWID_OPOSNET,1,0,",",%MB_POSDNET%	,%DIR_POSDNET%%EXE_POSDNET%		,,%CTRL_POSDNET%,,"%OP1_POSDNET_C%	,%OP2_POSDNET_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_POSDNET% %SWVer_POSDNET%%\n%,,",		; "Microsoft POS for .NET"
+SWID_JPOSADK		="%SW_JPOSADK%"		,%OS_JPOSADK%,,%TIP_JPOSADK%		,"%SWVER_JPOSADK%",,1,0,",",%MB_JPOSADK%	,%DIR_JPOSADK%%EXE_JPOSADK%		,,%CTRL_JPOSADK%,,"%OP1_JPOSADK_C%	,%OP2_JPOSADK_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JPOSADK% %SWVer_JPOSADK%%\n%,,",		; "Java POS ADK"
+;SWID_JRE		="%SW_JRE%"	,%OS_JRE%,,%TIP_JRE%		,"%SWVER_JRE%",SWID_JPOSADK,1,0,",",%MB_JRE%	,%DIR_JRE%%EXE_JRE%		,,%CTRL_JRE%,,"%OP1_JRE_C%	,%OP2_JRE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JRE% %SWVer_JRE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JRE% %SWVer_JRE%%\n%,,",		; "Java Runtime Environment"
+;SWID_JAI		="%SW_JAI%"	,%OS_JAI%,,%TIP_JAI%		,"%SWVER_JAI%",SWID_JPOSADK,1,0,",",%MB_JAI%	,%DIR_JAI%%EXE_JAI%		,,%CTRL_JAI%,,"%OP1_JAI_C%	,%OP2_JAI_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_JAI% %SWVer_JAI%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_JAI% %SWVer_JAI%%\n%,,",		; "Java Advanced Imaging"
+SWID_TMUTIL		="%SW_TMUTIL%"		,%OS_TMUTIL%,,%TIP_TMUTIL%		,"%SWVER_TMUTIL%",,1,0,",",%MB_TMUTIL%	,%DIR_TMUTIL%%EXE_SETUP%		,,%CTRL_TMUTIL%,,"%OP1_TMUTIL_C%	,%OP2_TMUTIL_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMUTIL% %SWVer_TMUTIL%%\n%,,",		; "TMNet Utility"
+SWID_COUPONGENE		="%SW_COUPONGENE%"	,%OS_COUPONGENE%,,%TIP_COUPONGENE%	,"%SWVER_COUPONGENE%",SWID_TMUTIL,1,0,",",%MB_COUPONGENE%	,%DIR_COUPONGENE%%EXE_COUPONGENE%		,,%CTRL_COUPONGENE%,,"%OP1_COUPONGENE_C%	,%OP2_COUPONGENE_C%",,,,,,"USER_CHOICE_CONFIRM2,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_COUPONGENE% %SWVer_COUPONGENE%%\n%,,",		; "Coupon Generator"
+SWID_TMNETWC		="%SW_TMNETWC%"		,%OS_TMNETWC%,,%TIP_TMNETWC%		,"%SWVER_TMNETWC%",,1,0,",",%MB_TMNETWC%	,%DIR_TMNETWC%%EXE_SETUP%		,,%CTRL_TMNETWC%,,"%OP1_TMNETWC_C%	,%OP2_TMNETWC_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMNETWC% %SWVer_TMNETWC%%\n%,,",		; "TMNet WinConfig"
+SWID_EPNETSV		="%SW_EPNETSV%"	,%OS_EPNETSV%,,%TIP_EPNETSV%		,"%SWVER_EPNETSV%",,1,0,",",%MB_EPNETSV%	,%DIR_EPNETSV%%EXE_SETUP%		,,%CTRL_EPNETSV%,,"%OP1_EPNETSV_C%	,%OP2_EPNETSV_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_EPNETSV% %SWVer_EPNETSV%%\n%,,",		; "EpsonNet SimpleViewer"
+SWID_TMVPD		="%SW_TMVPD%"	,%OS_TMVPD%,,%TIP_TMVPD%		,"%SWVER_TMVPD%",,1,0,",",%MB_TMVPD%	,%DIR_TMVPD_JA%%EXE_TMVPD_JA%		,,%CTRL_TMVPD%,,"%OP1_TMVPD_C%	,%OP2_TMVPD_C%",,,,,,"USER_CHOICE_CONFIRM3,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,,USER_INSTALLED_CONFIRM,-%SW_TMVPD% %SWVer_TMVPD%%\n%,,",		; "TM Virtual Port Driver"
+
+; -----------------------------------------------------------------------------
+; -------- Installing TMUSB Driver --------------------------------------------
+; -----------------------------------------------------------------------------
+[TMUSBInstall.Act]
+ActionMode	=EXEC
+Exec1	="SWID_TMCOMUSB",
+;SWID_TMCOMUSB	=%OS_TMCOMUSB%,%DIR_TMCOMUSB%%EXE_SETUP%,,%CTRL_TMCOMUSB%,,"%OP1_TMCOMUSB_C%,%OP2_TMCOMUSB_C%,",	; TMCOMUSB(Setup.exe)
+SWID_TMCOMUSB	=%OS_TMCOMUSB%,%DIR_TMCOMUSB%%EXE_SETUP%,,%CTRL_TMCOMUSB%,,"%OP1_TMCOMUSB_E%,%OP2_TMCOMUSB_E%,",	; TMCOMUSB(Setup.exe)
+;SWID_TMCOMUSB86	=%OS_TMCOMUSB86%,%DIR_TMCOMUSB86%%EXE_TMCOMUSB86%,,%CTRL_TMCOMUSB86%,,"%OP1_TMCOMUSB86_E%,%OP2_TMCOMUSB86_E%,",	; TMCOMUSBX86(DPInst.exe)
+;SWID_TMCOMUSB64	=%OS_TMCOMUSB64%,%DIR_TMCOMUSB64%%EXE_TMCOMUSB64%,,%CTRL_TMCOMUSB64%,,"%OP1_TMCOMUSB64_E%,%OP2_TMCOMUSB64_E%,",	; TMCOMUSBX64(DPInst.exe)
+
+[TMUSBInstall.Act.sku.us]
+ActionMode	=EXEC
+Exec1	="SWID_TMCOMUSB",
+SWID_TMCOMUSB	=%OS_TMCOMUSB%,%DIR_TMCOMUSB%%EXE_SETUP%,,%CTRL_TMCOMUSB%,,"%OP1_TMCOMUSB_E%,%OP2_TMCOMUSB_E%,",	; TMCOMUSB(Setup.exe)
+
+[TMUSBInstall.Act.sku.ja]
+ActionMode	=EXEC
+Exec1	="SWID_TMCOMUSB",
+SWID_TMCOMUSB	=%OS_TMCOMUSB%,%DIR_TMCOMUSB%%EXE_SETUP%,,%CTRL_TMCOMUSB%,,"%OP1_TMCOMUSB_E%,%OP2_TMCOMUSB_E%,",	; TMCOMUSB(Setup.exe)
+
+; -----------------------------------------------------------------------------
+; -------- Panel.Connect(Easy) ------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.ConnectE]
+MainWindow		=,"0,,0",
+PanelSetting		=DEFAULT,0
+AddImage		="%FILE_CONNECT%","24,65"
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideConnect",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideConnectSub",,
+TextArea.GuideNote	="TEXT","28,250,522,100","Font.XSmall,%COLOR_BLACK%","List.GuideConnectNote",,
+
+;Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"TMCancelPolling.Act,BACK.Act"			,,0x00020000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMForwardPolling.Act"	,,0x00000000,,""
+;Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"TMCancelPolling.Act,QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+Button.Back		    =,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"TMCancelPolling.Act,BACK.Act"			,,0x00000004,,
+Button.Next		    =,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMForwardPolling.Act"	,,0x00000000,,""
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"TMCancelPolling.Act,QuitConfirm.Act,Panel.Main"				,,0x00000004,,
+
+[List.GuideConnect]
+stc1		="%MES_CONNECT%",,,LEFT,""
+
+[List.GuideConnectSub]
+stc1		="%MES_CONNECT_SUB%",,,LEFT,""
+
+[List.GuideConnectNote]
+stc1		="%MES_CONNECT_NOTE%",,,LEFT,""
+
+; -----------------------------------------------------------------------------
+; -------- Port Settings(COMMON Description) ----------------------------------
+; -----------------------------------------------------------------------------
+[SetPort.COMMON]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+AddImage		=%FILE_FINISH%,"0,61"
+PanelSetting		=DEFAULT,0
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideSetPort",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideSetPortSub",,
+;[T20II Desc Start]
+;Button.Com		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_COMPORT%	,"SetPort.COM"			,,0x000004000,,
+;Button.Para		=,%RECT_PORTPANEL_BTN2%,Font.Button,,%BTN_PARALLEL%	,"SetPort.Parallel"		,,0x00004000,,
+;Button.USB		=,%RECT_PORTPANEL_BTN3%,Font.Button,,%BTN_USB%	,"SetPort.USB"			,,0x00004000,,
+;Button.ETHER		=,%RECT_PORTPANEL_BTN4%,Font.Button,,%BTN_ETHER%	,"SetPort.ETHER"		,,0x00004000,,
+Button.USB		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_USB%	,"SetPort.USB"			,,0x00004000,,
+Button.Com		=,%RECT_PORTPANEL_BTN2%,Font.Button,,%BTN_COMPORT%	,"SetPort.COM"			,,0x000004000,,
+Button.ETHER		=,%RECT_PORTPANEL_BTN3%,Font.Button,,%BTN_ETHER%	,"SetPort.ETHER"		,,0x00004000,,
+;[T20II Desc END]
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMAutoUncheck.Act,TMConfirm.Act,Panel.Confirm"	,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm"	,,0x00000000,,
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+;[SetPort.COMMON.us]
+;MainWindow		=,"0,,0",
+;ScreenColor		="255,255,255"
+;ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+;AddImage		=%FILE_FINISH%,"0,61"
+;PanelSetting		=DEFAULT,0
+
+;TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideSetPort",,
+;TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideSetPortSub",,
+;Button.USB		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_USB%	,"SetPort.USB.sku.us"			,,0x00004000,,
+;Button.Com		=,%RECT_PORTPANEL_BTN2%,Font.Button,,%BTN_COMPORT%	,"SetPort.COM.sku.us"		,,0x00004000,,
+;Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm"	,,0x00000000,,
+;Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+;[SetPort.COMMON.ja]
+;MainWindow		=,"0,,0",
+;ScreenColor		="255,255,255"
+;ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+;AddImage		=%FILE_FINISH%,"0,61"
+;PanelSetting		=DEFAULT,0
+
+;TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideSetPort",,
+;TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideSetPortSub",,
+;Button.USB		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_USB%	,"SetPort.USB"			,,0x00004000,,
+;Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm"	,,0x00000000,,
+;Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+[List.GuideSetPort]
+stc1		="%MES_SETPORT%",,,LEFT,""
+
+[List.GuideSetPortSub]
+stc1		="%MES_SETPORT_SUB%",,,LEFT,""
+
+[TMPortConfig.COM.Act]
+ActionMode=TMPORTPARAMCOM
+TMConfirm="%MES_CREATE_COM%,DESC_PORT_CONFIG","%MODEL_NAME%;%DESC_MODELWITHSKU%;1;,DESC_PORT_COMMAND"
+
+[TMPortConfig.LPT.Act]
+ActionMode=TMPORTPARAMLPT
+TMConfirm="%MES_CREATE_LPT%,DESC_PORT_CONFIG","%MODEL_NAME%;%DESC_MODELWITHSKU%;1;,DESC_PORT_COMMAND"
+
+[TMPortConfig.ETHER.Act]
+ActionMode=TMPORTPARAMETHER
+TMConfirm="%MES_CREATE_ETHER%,DESC_PORT_CONFIG","%MODEL_NAME%;%DESC_MODELWITHSKU%;1;,DESC_PORT_COMMAND"
+
+[TMPortConfig.USB.Act]
+ActionMode=TMPORTPARAMUSB
+TMConfirm="%MES_CREATE_USB%,DESC_PORT_CONFIG","%MODEL_NAME%;%DESC_MODELWITHSKU%;1;,DESC_PORT_COMMAND"
+
+; -----------------------------------------------------------------------------
+; -------- Port Settings(COM) -------------------------------------------------
+; -----------------------------------------------------------------------------
+[SetPort.COM]
+BaseSection="SetPort.COMMON"
+;[T20II Desc Start]
+;Button.Com		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_COMPORT%	,"SetPort.COM"			,,0x00002000,,
+Button.Com		=,%RECT_PORTPANEL_BTN2%,Font.Button,,%BTN_COMPORT%	,"SetPort.COM"			,,0x00002000,,
+;[T20II Desc END]
+TextArea.DescCOM	="TEXT","225,124,80,20","Font.XSmall,%COLOR_BLACK%","List.CapCOM",,
+BoxArea.Port		="TMCOMBO","306,120,130,60","Font.XSmall",",","",1,"1,","",,"1,"
+FreeArea.ComPort	="GROUP","250,144,280,140","Font.XSmall",,"%MES_GRP_COM%,,,",
+TextArea.BauRate	="TEXT","265,170,100,12","Font.XSmall,%COLOR_BLACK%","List.CapBauRate",,
+;BoxArea.BauRate		="TMCOMBO","376,164,124,60","Font.XSmall","List.BauRate,BR2","",1,"1,","",,","
+BoxArea.BauRate		="TMCOMBO","376,164,124,60","Font.XSmall","List.BauRate,BR4","",1,"1,","",,","
+TextArea.DataBits	="TEXT","265,196,100,12","Font.XSmall,%COLOR_BLACK%","List.CapDataBits",,
+BoxArea.DataBits	="TMCOMBO","376,192,124,60","Font.XSmall","List.DataBits,DB0","",1,"1,","",,","
+TextArea.Parity		="TEXT","265,222,100,12","Font.XSmall,%COLOR_BLACK%","List.CapParity",,
+BoxArea.Parity		="TMCOMBO","376,220,124,60","Font.XSmall","List.Parity,PTY0","",1,"1,","",,","
+TextArea.Stop		="TEXT","265,248,100,12","Font.XSmall,%COLOR_BLACK%","List.CapStop",,
+BoxArea.Stop		="TMCOMBO","376,248,124,60","Font.XSmall","List.Stop,SB0","",1,"1,","",,","
+BoxArea.Method		="TMCOMBO","376,288,124,60","Font.XSmall","List.Method,MT0","",0,"1,","",,","
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.COM.Act,TMAutoUncheck.Act,TMConfirm.Act,Panel.Confirm"	,,0x00010000,,
+
+;[SetPort.Com.sku.us]
+;BaseSection="SetPort.COMMON.us"
+;Button.Com		=,%RECT_PORTPANEL_BTN2%,Font.Button,,%BTN_COMPORT%	,"SetPort.Com.sku.us"			,,0x00002000,,
+;TextArea.DescCOM	="TEXT","225,124,80,20","Font.XSmall,%COLOR_BLACK%","List.CapCOM",,
+;BoxArea.Port		="TMCOMBO","306,120,130,60","Font.XSmall",",","",1,"1,","",,"1,"
+;FreeArea.ComPort	="GROUP","250,144,280,140","Font.XSmall",,"%MES_GRP_COM%,,,",
+;TextArea.BauRate	="TEXT","265,170,100,12","Font.XSmall,%COLOR_BLACK%","List.CapBauRate",,
+;BoxArea.BauRate		="TMCOMBO","376,164,124,60","Font.XSmall","List.BauRate,BR2","",1,"1,","",,","
+;TextArea.DataBits	="TEXT","265,196,100,12","Font.XSmall,%COLOR_BLACK%","List.CapDataBits",,
+;BoxArea.DataBits	="TMCOMBO","376,192,124,60","Font.XSmall","List.DataBits,DB0","",1,"1,","",,","
+;TextArea.Parity		="TEXT","265,222,100,12","Font.XSmall,%COLOR_BLACK%","List.CapParity",,
+;BoxArea.Parity		="TMCOMBO","376,220,124,60","Font.XSmall","List.Parity,PTY0","",1,"1,","",,","
+;TextArea.Stop		="TEXT","265,248,100,12","Font.XSmall,%COLOR_BLACK%","List.CapStop",,
+;BoxArea.Stop		="TMCOMBO","376,248,124,60","Font.XSmall","List.Stop,SB0","",1,"1,","",,","
+;BoxArea.Method		="TMCOMBO","376,288,124,60","Font.XSmall","List.Method,MT0","",0,"1,","",,","
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.COM.Act,TMConfirm.Act,Panel.Confirm"	,,0x00010000,,
+
+; -----------------------------------------------------------------------------
+; -------- Port Settings(Para) ------------------------------------------------
+; -----------------------------------------------------------------------------
+[SetPort.Parallel]
+BaseSection="SetPort.COMMON"
+;[T82II Desc Start]
+;[T20II Desc Start]
+;Button.Para		=,%RECT_PORTPANEL_BTN2%,Font.Button,,%BTN_PARALLEL%	,"SetPort.Parallel"		,,0x00002000,,
+;[T20II Desc END]
+;Button.Para		=,%RECT_PORTPANEL_BTN4%,Font.Button,,%BTN_PARALLEL%	,"SetPort.Parallel"		,,0x00002000,,
+;[T82II Desc END]
+TextArea.DescLPT	="TEXT","235,124,70,20","Font.XSmall,%COLOR_BLACK%","List.GuideParaLPT",,
+BoxArea.Port		="TMCOMBO","306,120,130,60","Font.XSmall",",","",1,"1,","",,"2,"
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.LPT.Act,TMAutoUncheck.Act,TMConfirm.Act,Panel.Confirm"	,,0x00010000,,
+
+; -----------------------------------------------------------------------------
+; -------- Port Settings(USB) -------------------------------------------------
+; -----------------------------------------------------------------------------
+[SetPort.USB]
+BaseSection="SetPort.COMMON"
+;[T20II Desc Start]
+;Button.USB		=,%RECT_PORTPANEL_BTN3%,Font.Button,,%BTN_USB%	,"SetPort.USB"			,,0x00002000,,
+Button.USB		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_USB%	,"SetPort.USB"			,,0x00002000,,
+;[T20II Desc END]
+TextArea.DescUSB	="TEXT","235,124,250,20","Font.XSmall,%COLOR_BLACK%","List.GuideUSBCnt",,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.USB.Act,TMAutoUncheck.Act,TMConfirm.Act,Panel.Confirm"	,,0x00010000,,
+
+;[SetPort.USB.sku.us]
+;BaseSection="SetPort.COMMON.us"
+;Button.USB		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_USB%	,"SetPort.USB.sku.us"			,,0x00002000,,
+;TextArea.DescUSB	="TEXT","235,124,250,20","Font.XSmall,%COLOR_BLACK%","List.GuideUSBCnt",,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm"	,,0x00010000,,
+
+;[SetPort.USB.sku.ja]
+;BaseSection="SetPort.COMMON.ja"
+;Button.USB		=,%RECT_PORTPANEL_BTN1%,Font.Button,,%BTN_USB%	,"SetPort.USB.sku.ja"			,,0x00002000,,
+;TextArea.DescUSB	="TEXT","235,124,250,20","Font.XSmall,%COLOR_BLACK%","List.GuideUSBCnt",,
+;Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm"	,,0x00010000,,
+
+; -----------------------------------------------------------------------------
+; -------- Port Settings(ETHER) -----------------------------------------------
+; -----------------------------------------------------------------------------
+[SetPort.ETHER]
+BaseSection="SetPort.COMMON"
+;[T20II Desc Start]
+;Button.ETHER		=,%RECT_PORTPANEL_BTN4%,Font.Button,,%BTN_ETHER%	,"SetPort.ETHER"		,,0x00002000,,
+Button.ETHER		=,%RECT_PORTPANEL_BTN3%,Font.Button,,%BTN_ETHER%	,"SetPort.ETHER"		,,0x00002000,,
+;[T20II Desc END]
+TextArea.DescIP		="TEXT","235,124,70,12","Font.XSmall,%COLOR_BLACK%","List.GuideEtherIP",,
+FreeArea.IPEdit		="TMIPEDIT","306,120,188,20","Font.XSmall",,"%USER_IP_ADDRESS%,,,",
+TextArea.DescSub	="TEXT","235,214,270,40","Font.XSmall,%COLOR_BLACK%","List.GuideEtherWC",,
+BoxArea.Port		="TMCOMBO","306,160,188,60","Font.XSmall",",","%USER_IP_ADDRESS%",1,",","",,"3,"
+Button.Search		=,"500,160,75,23",Font.Button,"BoxArea.Port",%BTN_SEARCH%	,""		,,0x00010000,,
+Button.RunTMNet		=,"430,254,145,23",Font.Button,,%BTN_RUN_ENETC%	,"TMNetWCCheck.Act,TMNetWCLaunch.Act"		,,0x00020000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,"TMPortConfig.ETHER.Act,TMAutoCheck.Act,TMConfirm.Act,Panel.Confirm"	,,0x00020000,,
+
+[List.CapBauRate]
+stc1		="%MES_CAP_BAURATE%",,,LEFT,""
+
+[List.CapDataBits]
+stc1		="%MES_CAP_DATABITS%",,,LEFT,""
+
+[List.CapParity]
+stc1		="%MES_CAP_PARITY%",,,LEFT,""
+
+[List.CapStop]
+stc1		="%MES_CAP_STOP%",,,LEFT,""
+
+[List.CapCOM]
+stc1		="%MES_CAP_COM%",,,LEFT,""
+
+[List.GuideParaLPT]
+stc1		="%MES_CAP_LPT%",,,LEFT,""
+
+[List.GuideUSBCnt]
+stc1		="%MES_USBPORT_DESC%",,,LEFT,""
+
+[List.GuideEtherIP]
+stc1		="%MES_CAP_IPADDRESS%",,,LEFT,""
+
+[List.GuideEtherWC]
+stc1		="%MES_RUN_ENETC%",,,LEFT,""
+
+[List.BauRate]
+BR0="2400"
+BR1="4800"
+BR2="9600"
+BR3="19200"
+BR4="38400"
+BR5="57600"
+BR6="115200"
+
+[List.DataBits]
+DB0="8"
+
+[List.Parity]
+PTY0=%COMPARITY_NONE%,,,,0
+PTY1=%COMPARITY_ODD%,,,,1
+PTY2=%COMPARITY_EVEN%,,,,2
+
+[List.Stop]
+SB0="1"
+
+[List.Method]
+MT0="DTR/DSR",,,,1
+MT1="RTS/CTS",,,,2
+
+[List.USBPort]
+USB0="%MES_CREATE_USB%",,,,1
+
+; -----------------------------------------------------------------------------
+; -------- Checking and Installing TMNet WinConfig ----------------------------
+; -----------------------------------------------------------------------------
+[TMNetWCAskInstall.Act]
+ActionMode	=DIALOG
+DialogSetting	=%MES_ASK_ENETC%,"%BTN_YES%,0x00000001","%BTN_NO%,0x00000002"
+
+[TMNetWCCheck.Act]
+ActionMode	=DIAG
+DiagCheckItem.TMNWC	=0xFFFFFFFF,1,"DIAG_PATH,%INSTEXEFDR_SW_TMNETWC%%INSTEXE_SW_TMNETWC%","%SECTION_TMNETINSTALL%,%MES_DIAG_SWDETECT%<br>"
+
+[TMNetWCInstall.Act]
+ActionMode	=EXEC
+Exec1	="SWID_TMNETWC,SWID_TMNETWCRUN",
+SWID_TMNETWC	=%OS_TMNETWC%,"%DIR_TMNETWC%%EXE_SETUP%",,%CTRL_TMNETWC%,,"%OP1_TMNETWC_E%,%OP2_TMNETWC_E%,",	; TMNet WinConfig Installer
+SWID_TMNETWCRUN	=%OS_TMNETWC%,"%INSTEXEFDR_SW_TMNETWC%%INSTEXE_SW_TMNETWC%",,%CTRL_SW_TMNETWC%,,"%OP1_SW_TMNETWC_C%,%OP2_SW_TMNETWC_C%,",	; TMNet WinConfig
+
+[TMNetWCLaunch.Act]
+ActionMode	=EXEC
+Exec1	="SWID_TMNETWCRUN",
+SWID_TMNETWCRUN	=%OS_TMNETWC%,"%INSTEXEFDR_SW_TMNETWC%%INSTEXE_SW_TMNETWC%",,%CTRL_SW_TMNETWC%,,"%OP1_SW_TMNETWC_C%,%OP2_SW_TMNETWC_C%,",	; TMNet WinConfig
+
+[TMConfirm.Act]
+ActionMode	=TMCONFIRM
+
+[TMConfirm.Act.sku.us]
+ActionMode	=TMCONFIRM
+
+[TMConfirm.Act.sku.ja]
+ActionMode	=TMCONFIRM
+
+[TMFinish.Act]
+ActionMode	=TMFINISH
+
+[TMAutoCheck.Act]
+ACTIONMODE=TMAUTOCHECK
+
+[TMAutoUncheck.Act]
+ACTIONMODE=TMAUTOUNCHECK
+
+; -----------------------------------------------------------------------------
+; -------- Confirm.Act --------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Confirm]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+AddImage=NONE
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideCfm",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideCfmSub",,
+TextArea.GuideDesc	="TEXT","30,66,528,25","Font.XSmall,%COLOR_BLACK%","List.ComfirmDesc",,
+FreeArea.Comfirm2K	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WIN2KSTRICT%,"%USER_CHOICE_CONFIRM1%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+FreeArea.ComfirmXP	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WINXPLATER%,"%USER_CHOICE_CONFIRM1%%\t%%MES_PRINTER_CONFIG%%\n%%\t%%\t%%MES_ADD_MODEL%%\n%%\t%%\t%%\t%%DESC_MODELWITHSKU%%\n%%\t%%\t%%\t%%DESC_PORT_CONFIG%%\n%%\n%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,"Install.Act"	,,0x00000000,,
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"QuitConfirm.Act,Panel.Main"				,,0x00000000,,
+
+[List.GuideCfm]
+stc1		="%MES_CONFIRM%",,,LEFT,""
+
+[List.GuideCfmSub]
+stc1		="%MES_CONFIRM_SUB%",,,LEFT,""
+
+[List.ComfirmDesc]
+stc1		="%MES_CONFIRM_DESC%",,,LEFT,""
+
+[Panel.Confirm.CusAndUpd]
+BaseSection="Panel.Confirm"
+FreeArea.ComfirmXP	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WINXPLATER%,"%USER_CHOICE_CONFIRM1%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,"Install.Act.CusAndUpd"	,,0x00000000,,
+
+[Panel.Confirm.CusAndUpd.tc]
+BaseSection="Panel.Confirm"
+FreeArea.ComfirmXP	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WINXPLATER%,"%USER_CHOICE_CONFIRM1%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,"Install.Act.CusAndUpd"	,,0x00000000,,
+
+[Panel.Confirm.CusAndUpd.sc]
+BaseSection="Panel.Confirm"
+FreeArea.ComfirmXP	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WINXPLATER%,"%USER_CHOICE_CONFIRM1%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,"Install.Act.CusAndUpd"	,,0x00000000,,
+
+[Panel.Confirm.CusAndUpd.sa]
+BaseSection="Panel.Confirm"
+FreeArea.ComfirmXP	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WINXPLATER%,"%USER_CHOICE_CONFIRM1%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,"Install.Act.CusAndUpd"	,,0x00000000,,
+
+[Panel.Confirm.CusAndUpd.ja]
+BaseSection="Panel.Confirm"
+FreeArea.ComfirmXP	="TMEDIT",%RECT_CONFIRM_LIST%,"Font.XSmall",%OS_WINXPLATER%,"%USER_CHOICE_CONFIRM1%%USER_CHOICE_CONFIRM2%%USER_CHOICE_CONFIRM3%,,,",
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,"Install.Act.CusAndUpd"	,,0x00000000,,
+
+; -----------------------------------------------------------------------------
+; -------- Panel.Install ------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Install]
+MainWindow		=,"0,,0",
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+ProgressBar		="53,180,490,20"
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideInstall",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideInstallSub",,
+TextArea.Inst		="TEXT","45,140,490,40","Font.XSmall,%COLOR_BLACK%","List.Installing",,"5,"
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,""	,,0x00000004,,
+Button.Install		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_INSTALL%	,""	,,0x00000004,,
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,""	,,0x00000004,,
+
+[List.GuideInstall]
+stc1		="%MES_INSTALL_TITLE%",,,LEFT,""
+
+[List.GuideInstallSub]
+stc1		="%MES_INSTALL_TITLE_SUB%",,,LEFT,""
+
+[List.Installing]
+;stc0		=%MES_REMAINING_TIME%,,,LEFT,""
+stc1		=%MES_INSTALL%,,,LEFT,""
+
+; -----------------------------------------------------------------------------
+; -------- Panel.Finish -------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Finish]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+AddImage		=%FILE_FINISH%,"0,61"
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideFinish",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideFinishSub",,
+FreeArea.Finish	="TMEDIT",%RECT_FINISH_LIST%,"Font.XSmall",,"%MES_INSTALL_RESULT%%\n%%\n%%USER_INSTALLED_CONFIRM%,,,",
+
+TextArea.DescSub	="TEXT","176,200,430,70","Font.XSmall,%COLOR_BLACK%","List.DescTestPrn",,
+;[T20II Desc Start]
+;BoxArea.PrnChoice	="TMCOMBO","182,228,210,60","Font.XSmall",",",,1,",","",,"4,%FILE_TESTPRINTOEMINF%,%MES_T82IIPRINTDOC%,%FILE_PRINTDOC%"
+BoxArea.PrnChoice	="TMCOMBO","182,228,210,60","Font.XSmall",",",,1,",","",,"4,%FILE_TESTPRINTOEMINF%,%MES_T20IIPRINTDOC%,%FILE_PRINTDOC%"
+;[T20II Desc End]
+Button.TestPrint		=,"400,224,120,28",Font.Button,"BoxArea.PrnChoice",%BTN_TESTPRINT%	,""		,,0x00010000,,""
+
+TextArea.GuideCheckTitle="TEXT","176,265,430,70","Font.XSmall,%COLOR_BLACK%","List.GuideCheckTitle",,
+TextArea.GuideCheck	="CHECK","186,285,200,70","Font.XSmall,%COLOR_BLACK%","List.GuideCheck,stc1",,
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,""	,,0x00000004,,
+Button.Finish		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_FINISH%	,"ExecUtil.Act,Quit.Act"	,,0x00000008,,""
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,""	,,0x00000004,,
+
+[List.GuideCfm]
+stc1		="%MES_CONFIRM%",,,LEFT,""
+
+[List.GuideCfmSub]
+stc1		="%MES_CONFIRM_SUB%",,,LEFT,""
+
+[List.ComfirmDesc]
+stc1		="%MES_CONFIRM_DESC%",,,LEFT,""
+
+[List.GuideFinish]
+stc1		="%MES_FINISH_TITLE%",,,LEFT,""
+
+[List.GuideFinishSub]
+stc1		="%MES_FINISH_TITLE_SUB%",,,LEFT,""
+
+[List.DescTestPrn]
+stc1		="%MES_TESTPRINT%",,,LEFT,"",
+
+[List.GuideCheckTitle]
+stc1		="%MES_FINISH_CHECK_TITLE%",,,LEFT,""
+
+[List.GuideCheck]
+stc1		="%MES_FINISH_CHECK%",,,LEFT,".Exec"
+
+[Panel.Finish.CusAndUpd]
+BaseSection="Panel.Finish"
+FreeArea.Finish	="TMEDIT",%RECT_FINISH_LIST%,"Font.XSmall",,"%MES_LAUNCHED_SW%%\n%%\n%%USER_INSTALLED_CONFIRM%,,,",
+TextArea.GuideCheck	="CHECK","186,285,200,70","Font.XSmall,%COLOR_BLACK%","List.GuideCheck,",,
+
+; -----------------------------------------------------------------------------
+; -------- Launch TM Utility after Finish Installation ------------------------
+; -----------------------------------------------------------------------------
+[ExecUtil.Act.Exec]
+ActionMode	=EXEC
+Exec1	="SWID_INSTTMUTIL",
+SWID_INSTTMUTIL	=%OS_TMUTIL%,%ProgramFiles%%DIR_INSTTMUTIL%%EXE_INSTTMUTIL%,,0x00010000,,",,",	; TMUtility(TMT82IIVUTL.EXE)
+
+[Quit.Act.Exec]
+ACTIONMODE=QUIT
+
+; -----------------------------------------------------------------------------
+; -------- Panel.Manual -------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Manual]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideManual",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideManualSub",,
+TextArea.GuideView	="TEXT","304,85,276,100","Font.XSmall,%COLOR_BLACK%","List.GuideView",,
+
+FreeArea.GetAdobe	="GROUP","365,194,210,105","Font.XSmall",,",,,",
+TextArea.GuideAdobeSub	="TEXT","382,208,186,44","Font.XSmall,%COLOR_BLACK%","List.GuideAdobeSub",,
+;[T20II Desc Start]
+;Button.SWManal		=,"20,95,280,60",Font.ButtonB,,%BTN_OPEN_SWMANUAL%,"DiagAdbeReader.Act,SWManualView.Act",,0x00000000,,,""
+;Button.UsrManual	=,"20,163,280,60",Font.ButtonB,,%BTN_OPEN_USRMANUAL%,"DiagAdbeReader.Act,UsrManualView.Act",,0x00000000,,,""
+;Button.TRG			=,"20,231,280,60",Font.ButtonB,,%BTN_OPEN_TRG%,"DiagAdbeReader.Act,TRGView.Act",,0x00000000,,,""
+Button.SWManal		=,"20,75,280,50",Font.ButtonB,,%BTN_OPEN_SWMANUAL%,"DiagAdbeReader.Act,SWManualView.Act",,0x00000000,,,""
+Button.UsrManual	=,"20,133,280,50",Font.ButtonB,,%BTN_OPEN_USRMANUAL%,"DiagAdbeReader.Act,UsrManualView.Act",,0x00000000,,,""
+Button.QR		=,"20,191,280,50",Font.ButtonB,,%BTN_OPEN_QR%,"DiagAdbeReader.Act,QRView.Act",,0x00000000,,,""
+;Button.QR		=,"20,254,280,50",Font.ButtonB,,%BTN_OPEN_QR%,"DiagAdbeReader.Act,QRView.Act",,0x00000000,,,""
+;Button.TRG		=,"20,196,280,50",Font.ButtonB,,%BTN_OPEN_TRG%,"DiagAdbeReader.Act,TRGView.Act",,0x00000000,,,""
+FreeArea.GetManual	="GROUP","15,247,290,60",Font.XSmall,,"%MES_DOWNLOAD_LATEST_VER%,,,",
+Button.TRGURL		=,"23,262,273,37",Font.ButtonB,,%BTN_DOWNLOAD_TRG3%,"GetTRG.Act",,0x00000000,,,""
+;[T20II Desc END]
+Button.Adobe		=,"386,252,178,30",Font.Button,,%BTN_GET_ADOBE%,"GetAdobe.Act",,0x00000000,,,""
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,""	,,0x00000004,,""
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"Panel.Main"		,,0x00000004,,
+
+[List.GuideManual]
+stc1		="%MES_MANUAL_MAIN%",,,LEFT,""
+
+[List.GuideManualSub]
+stc1		="%MES_MANUAL_MAIN_SUB%",,,LEFT,""
+
+[List.GuideView]
+stc1		="%MES_MANUAL_VIEW%",,,LEFT,""
+
+[List.GuideLangTitle]
+stc1		="%MES_MANUAL_LANG_TITLE%",,,LEFT,""
+
+[List.GuideAdobeSub]
+stc1		="%MES_MANUAL_ADOBE_SUB%",,,LEFT,""
+
+[DiagAdbeReader.Act]
+ActionMode	=DIAG
+DiagCheckItem.AR	=0xFFFFFFFF,1,"DIAG_FIND,%DIR_USRMANUAL%%FILE_USRMANUAL%","Panel.InstallAR,%MES_DIAG_AR%<br>"
+
+[Panel.InstallAR]
+ActionMode	=DIALOG
+DialogSetting	=%MES_MANUAL_ADOBE_ERR%,"%BTN_OK%,0x00000031",
+
+[SWManualView.Act]
+ActionMode	=EXEC
+Exec1	="SWID_MANUAL_FILE"
+SWID_MANUAL_FILE	=,"%DIR_SWMANUAL%%FILE_SWMANUAL%",,,,
+
+[UsrManualView.Act]
+ActionMode	=EXEC
+Exec1	="SWID_MANUAL_FILE"
+SWID_MANUAL_FILE	=,"%DIR_USRMANUAL%%FILE_USRMANUAL%",,,,
+
+[TRGView.Act]
+ActionMode	=EXEC
+Exec1	="SWID_MANUAL_FILE"
+SWID_MANUAL_FILE	=,"%DIR_TRG%%FILE_TRG%",,,,
+
+[GetAdobe.Act]
+ActionMode	=EXEC
+Exec1	="SWID_ADOBE_URL"
+SWID_ADOBE_URL	=,%URL_ADOBE_COM%,,,,
+
+;[T20II Desc Start]
+[QRView.Act]
+ActionMode	=EXEC
+Exec1	="SWID_QR_FILE"
+SWID_QR_FILE	=,"%DIR_QR%%FILE_QR%",,,,
+;[T20II Desc END]
+
+[GetTRG.Act]
+ActionMode	=EXEC
+Exec1	="SWID_MANUAL_FILE"
+SWID_MANUAL_FILE	=,"%URL_MANUAL_TRG%",,,,
+
+; -----------------------------------------------------------------------------
+; -------- Panel.Support ------------------------------------------------------
+; -----------------------------------------------------------------------------
+[Panel.Support]
+MainWindow		=,"0,,0",
+ScreenColor		="255,255,255"
+ScreenImage		="%FILE_BACK_MAIN1%,%FLG_LTR%"
+
+TextArea.Guide		="TEXT",%RECT_GUIDE%,"Font.MediumB,%COLOR_BLACK%","List.GuideSpt",,
+TextArea.GuideSub	="TEXT",%RECT_GUIDE_SUB%,"Font.XSmall,%COLOR_BLACK%","List.GuideSptSub",,
+TextArea.GuideEuro	="TEXT","265,68,305,70","Font.MediumB,%COLOR_BLACK%","List.GuideEuro",,
+TextArea.GuideEuroSub	="TEXT","280,100,305,70","Font.XSmall,%COLOR_BLACK%","List.GuideEuroSub",,
+TextArea.GuideNA	="TEXT","265,149,305,70","Font.MediumB,%COLOR_BLACK%","List.GuideNA",,
+TextArea.GuideNASub	="TEXT","280,181,305,70","Font.XSmall,%COLOR_BLACK%","List.GuideNASub",,
+:TextArea.GuideJA	="TEXT","265,230,305,70","Font.MediumB,%COLOR_BLACK%","List.GuideJa",,
+:TextArea.GuideJASub	="TEXT","280,262,305,70","Font.XSmall,%COLOR_BLACK%","List.GuideJaSub",,
+
+Button.Euro		=,"34,70,213,75",Font.ButtonB,,%BTN_EPSON_EURO%,"EpsonEuro.Act",,0x00000000,,,""
+Button.NA		=,"34,151,213,75",Font.ButtonB,,%BTN_EPSON_NA%,"EpsonNA.Act",,0x00000000,,,""
+:Button.JA		=,"34,232,213,75",Font.ButtonB,,%BTN_EPSON_JA%,"EpsonJa.Act",,0x00000000,,,""
+
+Button.Back		=,%RECT_BACK_BTN%,Font.Button,,%BTN_BACK%	,"Back.Act"			,,0x00000000,,
+Button.Next		=,%RECT_NEXT_BTN%,Font.Button,,%BTN_NEXT%	,""	,,0x00000004,,""
+Button.Cancel		=,%RECT_CANCEL_BTN%,Font.Button,,%BTN_CANCEL%	,"Panel.Main"		,,0x00000004,,
+
+[List.GuideSpt]
+stc1		="%MES_SUPPORT_MAIN%",,,LEFT,""
+
+[List.GuideSptSub]
+stc1		="%MES_SUPPORT_MAIN_SUB%",,,LEFT,""
+
+[List.GuideEuro]
+stc1		="%MES_SUPPORT_EURO%",,,LEFT,""
+
+[List.GuideEuroSub]
+stc1		="%MES_SUPPORT_EURO_SUB%",,,LEFT,""
+
+[List.GuideNA]
+stc1		="%MES_SUPPORT_NA%",,,LEFT,""
+
+[List.GuideNASub]
+stc1		="%MES_SUPPORT_NA_SUB%",,,LEFT,""
+
+[List.GuideJa]
+stc1		="%MES_SUPPORT_JA%",,,LEFT,""
+
+[List.GuideJaSub]
+stc1		="%MES_SUPPORT_JA_SUB%",,,LEFT,""
+
+[EpsonEuro.Act]
+ActionMode	=EXEC
+Exec1	="SWID_ADOBE_URL"
+SWID_ADOBE_URL	=,%URL_EPSON_EURO%,,,,
+
+[EpsonNA.Act]
+ActionMode	=EXEC
+Exec1	="SWID_ADOBE_URL"
+SWID_ADOBE_URL	=,%URL_EPSON_NA%,,,,
+
+[EpsonJa.Act]
+ActionMode	=EXEC
+Exec1	="SWID_ADOBE_URL"
+SWID_ADOBE_URL	=,%URL_EPSON_JA%,,,,
+
+; =====================================================================================================
+; === Common Action Section ===========================================================================
+; =====================================================================================================
+[Back.Act]
+ActionMode	=BACK
+
+[Quit.Act]
+ActionMode	=QUIT
+
+[TMPolling.Act]
+ActionMode	=TMPOLLING
+;TransSection="Panel.ConnectE","TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm",,,,"SKUChoice.EasySkip"
+TransSection="Panel.ConnectE","TMPortConfig.USB.Act,Panel.Finish",,,,"Panel.Finish"
+
+[TMPolling.Act.tc]
+ActionMode	=TMPOLLING
+TransSection="Panel.ConnectE","TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm",,,,"SKUChoice.EasySkip.tc"
+
+[TMPolling.Act.sc]
+ActionMode	=TMPOLLING
+TransSection="Panel.ConnectE","TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm",,,,"SKUChoice.EasySkip.sc"
+
+[TMPolling.Act.sa]
+ActionMode	=TMPOLLING
+TransSection="Panel.ConnectE","TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm",,,,"SKUChoice.EasySkip.sa"
+
+[TMPolling.Act.ja]
+ActionMode	=TMPOLLING
+TransSection="Panel.ConnectE","TMPortConfig.USB.Act,TMConfirm.Act,Panel.Confirm",,,,"SKUChoice.EasySkip.ja"
+
+[TMForwardPolling.Act]
+ActionMode	=TMFORWARDPA
+
+[TMCancelPolling.Act]
+ActionMode	=TMCANCELPA
+
+[Install.Act]
+ActionMode	=ALLINSTALL
+;TransSection="Panel.Install","TMFinish.Act,Panel.Finish"
+;[T82 Desc Start]
+TransSection="Panel.Install","TMFinish.Act,TMPolling.Act"
+;[T82 Desc End]
+
+[Install.Act.CusAndUpd]
+ActionMode	=ALLINSTALL
+TransSection="Panel.Install","TMFinish.Act,Panel.Finish.CusAndUpd"
+
+; ======================================================================================
+; === Resource Section =================================================================
+; ======================================================================================
+[FontSpec]
+Font.Xlarge		=%FONT_NAME%	,%FONT_SIZE_XLARGE%	,0x00000001
+Font.Large		=%FONT_NAME%	,%FONT_SIZE_LARGE%	,0x00000000
+Font.LargeB		=%FONT_NAME%	,%FONT_SIZE_LARGE%	,0x00000001
+Font.Medium		=%FONT_NAME%	,%FONT_SIZE_MEDIUM%	,0x00000000
+Font.MediumB	       =        %FONT_NAME%	,%FONT_SIZE_MEDIUM%	,0x00000001
+Font.Small		=%FONT_NAME%	,%FONT_SIZE_SMALL%	,0x00000000
+Font.SmallB		=%FONT_NAME%	,%FONT_SIZE_SMALL%	,0x00000001
+Font.Xsmall		=%FONT_NAME%	,%FONT_SIZE_XSMALL%	,0x00000000
+Font.Combo		=%FONT_NAME%	,%FONT_SIZE_COMBO%	,0x00000000
+Font.Button		=%FONT_NAME%	,%FONT_SIZE_BUTTON%	,0x00000000
+Font.ButtonB	=%FONT_NAME%	,%FONT_SIZE_BUTTON%	,0x00000001
+
+
+; ---------------------------------------------------------------------
+[LanguagesMapping]
+; -- for Mac --
+0x00000000		=0x00020000							; For English
+0x00010001		=0x005B0001,0x000B0001,0x00120001	; For Francais
+0x00030002		=0x00130002							; For German
+0x000A0008		=0x000A0000,0x00470000,				; For Portugal
+0x10000030		=kk_KZ								; For Kazakf
+0x20002000		=zh_HK								; For Hong kong
+
+
+; ---------------------------------------------------------------------
+[OS.definition]
+0x00000001=	%OS_PC_0x00000001%,,%OS_LOW_0x00000001%,%OS_HIGH_0x00000001%,%OS_CPU_0x00000001%,%OS_SP_0x00000001%,,%OS_PDT_0x00000001%	; for  Win2000(x32)		/ MacOS X10.2.8-10.2.9 (PCPPC) 
+0x00000002=	%OS_PC_0x00000002%,,%OS_LOW_0x00000002%,%OS_HIGH_0x00000002%,%OS_CPU_0x00000002%,%OS_SP_0x00000002%,,%OS_PDT_0x00000002%	; for  Dummy			/ MacOS X10.3.0-10.3.8 (PCPPC) 
+0x00000004=	%OS_PC_0x00000004%,,%OS_LOW_0x00000004%,%OS_HIGH_0x00000004%,%OS_CPU_0x00000004%,%OS_SP_0x00000004%,,%OS_PDT_0x00000004%	; for  WinXP(x32)		/ MacOS X10.3.9 (PCPPC) 
+0x00000008=	%OS_PC_0x00000008%,,%OS_LOW_0x00000008%,%OS_HIGH_0x00000008%,%OS_CPU_0x00000008%,%OS_SP_0x00000008%,,%OS_PDT_0x00000008%	; for  WinXP(x64)		/ MacOS X10.4.0-10.4.4 (PCPPC)
+0x00000010=	%OS_PC_0x00000010%,,%OS_LOW_0x00000010%,%OS_HIGH_0x00000010%,%OS_CPU_0x00000010%,%OS_SP_0x00000010%,,%OS_PDT_0x00000010%	; for  WinVISTA(x32)	/ MacOS X10.4.5-10.4 (PCPPC) 
+0x00000020=	%OS_PC_0x00000020%,,%OS_LOW_0x00000020%,%OS_HIGH_0x00000020%,%OS_CPU_0x00000020%,%OS_SP_0x00000020%,,%OS_PDT_0x00000020%	; for  WinVISTA(x64)	/ MacOS X10.4.0-10.4.4 (PCITL)
+0x00000040=	%OS_PC_0x00000040%,,%OS_LOW_0x00000040%,%OS_HIGH_0x00000040%,%OS_CPU_0x00000040%,%OS_SP_0x00000040%,,%OS_PDT_0x00000040%	; for  Win2003sv(x32)	/ MacOS X10.4.5-10.4 (PCITL)
+0x00000080=	%OS_PC_0x00000080%,,%OS_LOW_0x00000080%,%OS_HIGH_0x00000080%,%OS_CPU_0x00000080%,%OS_SP_0x00000080%,,%OS_PDT_0x00000080%	; for  Win2003sv(x64)	/ Dummy
+0x00000100=	%OS_PC_0x00000100%,,%OS_LOW_0x00000100%,%OS_HIGH_0x00000100%,%OS_CPU_0x00000100%,%OS_SP_0x00000100%,,%OS_PDT_0x00000100%	; for  Win2008sv(x32)	/ MacOS X10.5.0-10.5.x (PCPPC)
+0x00000200=	%OS_PC_0x00000200%,,%OS_LOW_0x00000200%,%OS_HIGH_0x00000200%,%OS_CPU_0x00000200%,%OS_SP_0x00000200%,,%OS_PDT_0x00000200%	; for  Win2008sv(x64)	/ MacOS X10.5.0-10.5.x (PCITL)
+0x00000400=	%OS_PC_0x00000400%,,%OS_LOW_0x00000400%,%OS_HIGH_0x00000400%,%OS_CPU_0x00000400%,%OS_SP_0x00000400%,,%OS_PDT_0x00000400%	; for  Windows7(x32)	/ MacOS X10.6.0-10.6.x (PCPPC)
+0x00000800=	%OS_PC_0x00000800%,,%OS_LOW_0x00000800%,%OS_HIGH_0x00000800%,%OS_CPU_0x00000800%,%OS_SP_0x00000800%,,%OS_PDT_0x00000800%	; for  Windows7(x64)	/ MacOS X10.6.0-10.6.x (PCITL)
+0x00001000=	%OS_PC_0x00001000%,,%OS_LOW_0x00001000%,%OS_HIGH_0x00001000%,%OS_CPU_0x00001000%,%OS_SP_0x00001000%,,%OS_PDT_0x00001000%	; for  Winx sv(x32)		/ Dummy
+0x00002000=	%OS_PC_0x00002000%,,%OS_LOW_0x00002000%,%OS_HIGH_0x00002000%,%OS_CPU_0x00002000%,%OS_SP_0x00002000%,,%OS_PDT_0x00002000%	; for  Winx sv(x64)		/ Dummy
+0x00004000=	%OS_PC_0x00004000%,,%OS_LOW_0x00004000%,%OS_HIGH_0x00004000%,%OS_CPU_0x00004000%,%OS_SP_0x00004000%,,%OS_PDT_0x00004000%	;
+0x00008000=	%OS_PC_0x00008000%,,%OS_LOW_0x00008000%,%OS_HIGH_0x00008000%,%OS_CPU_0x00008000%,%OS_SP_0x00008000%,,%OS_PDT_0x00008000%	;
+
+
+
+
+

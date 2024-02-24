@@ -1,0 +1,170 @@
+;	Printer Installation File
+;	List of supported printers, manufacturers
+
+[Version]
+Signature="$Windows NT$"
+Provider=%EPSON_CORP%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+DriverVer=04/01/2016, 5.07.0.0
+CatalogFile=EA5INSTMT20II.cat
+DriverIsolation	= 0
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+
+[PrinterPackageInstallation.amd64]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+
+[Manufacturer]
+"EPSON"=EPSON_DRV,NTx86.5.1,NTx86.6.0,NTamd64,NTamd64.6.0
+
+[EPSON_DRV]
+%PrinterName% = T20IIDriver2k,,USBPRINT\1284_CID_EpsonTM00001002
+%PrinterName% = T20IIDriver2k,USBPRINT\EPSONTM-T20IIAC25
+%PrinterName% = T20IIDriver2k,,USBPRINT\1284_CID_EpsonTM00001102
+%PrinterName% = T20IIDriver2k,USBPRINT\EPSONTM-T20II-JPNA35F
+%PrinterName% = T20IIDriver2k,,USBPRINT\1284_CID_EpsonTM00000002
+%PrinterName% = T20IIDriver2k,USBPRINT\EPSONTM-T20II-42C1ED7
+%PrinterName% = T20IIDriver2k,,USBPRINT\1284_CID_EpsonTM00000102
+%PrinterName% = T20IIDriver2k,USBPRINT\EPSONTM-T20II-JPN-4205FE
+
+[EPSON_DRV.NTx86.5.1]
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00001002
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20IIAC25
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00001102
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20II-JPNA35F
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00000002
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20II-42C1ED7
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00000102
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20II-JPN-4205FE
+
+[EPSON_DRV.NTx86.6.0]
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00001002
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20IIAC25
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00001102
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20II-JPNA35F
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00000002
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20II-42C1ED7
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00000102
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20II-JPN-4205FE
+
+[EPSON_DRV.NTamd64]
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00001002
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20IIAC25
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00001102
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20II-JPNA35F
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00000002
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20II-42C1ED7
+%PrinterName% = T20IIDriverXP,,USBPRINT\1284_CID_EpsonTM00000102
+%PrinterName% = T20IIDriverXP,USBPRINT\EPSONTM-T20II-JPN-4205FE
+
+[EPSON_DRV.NTamd64.6.0]
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00001002
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20IIAC25
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00001102
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20II-JPNA35F
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00000002
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20II-42C1ED7
+%PrinterName% = T20IIDriverVista,,USBPRINT\1284_CID_EpsonTM00000102
+%PrinterName% = T20IIDriverVista,USBPRINT\EPSONTM-T20II-JPN-4205FE
+
+[T20IIDriver2k]
+CopyFiles=T20IIDriverFiles,T20IIDriverFiles2k,T20IISystemFiles
+DataSection=UNIDRV_DATA
+DataFile=EA5MDLTMT20II.GPD
+Include=ntprint.inf
+Needs=UNIDRV.OEM,TTFSUB.OEM
+LanguageMonitor=%T20II_LM%
+
+[T20IIDriverXP.NTx86]
+CopyFiles=T20IIDriverFiles,T20IIDriverFilesXPVista,T20IISystemFiles
+DataSection=UNIDRV_DATA
+DataFile=EA5MDLTMT20II.GPD
+Include=ntprint.inf
+Needs=UNIDRV.OEM,TTFSUB.OEM
+LanguageMonitor=%T20II_LM%
+
+[T20IIDriverXP.NTamd64]
+CopyFiles=T20IIDriverFiles,T20IIDriverFilesXPVista,T20IISystemFiles
+DataSection=UNIDRV_DATA
+DataFile=EA5MDLTMT20II.GPD
+Include=ntprint.inf
+Needs=UNIDRV.OEM,TTFSUB.OEM
+LanguageMonitor=%T20II_LM%
+
+[T20IIDriverVista.NTx86]
+CopyFiles=T20IIDriverFiles,T20IIDriverFilesXPVista,T20IISystemFiles
+DataFile=EA5MDLTMT20II.GPD
+LanguageMonitor=%T20II_LM%
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA,TTFSUB.OEM"
+
+[T20IIDriverVista.NTamd64]
+CopyFiles=T20IIDriverFiles,T20IIDriverFilesXPVista,T20IISystemFiles
+DataFile=EA5MDLTMT20II.GPD
+LanguageMonitor=%T20II_LM%
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA,TTFSUB.OEM"
+
+[T20IIDriverFiles]
+EA5MDLTMT20II.GPD
+EA5PIITMT20II.INI
+EA5RESTMT20II.DLL
+EA5UIPTMT20II.dll,EA5UIPTM.dll
+EA5EpucInst.exe
+EA5Bcd0.dll
+EA5BcdR0.dll
+
+[T20IIDriverFiles2k]
+EA5RDPTMT20II.dll,EA5RDPTM.DLL
+
+[T20IIDriverFilesXPVista]
+EA5RDPTMT20II.dll,EA5RDPTM.DLL
+
+[T20IISystemFiles]
+EA5LMTMT20II.DLL,EA5LMTM.DLL,,,0x00000020
+EA5LMTMT20II.dat,EA5LMTMT20II.dat,,,0x00000020
+
+[DestinationDirs]
+DefaultDestDir=66000
+T20IISystemFiles=66002
+
+[SourceDisksNames]
+1 = %disk1%,,,
+
+[SourceDisksNames.x86]
+2 = %disk1%,,,\i386
+
+[SourceDisksNames.amd64]
+3 = %disk1%,,,\amd64
+
+[SourceDisksFiles]
+EA5MDLTMT20II.GPD = 1
+EA5PIITMT20II.INI = 1
+EA5RESTMT20II.DLL = 1
+EA5LMTMT20II.dat = 1
+
+[SourceDisksFiles.x86]
+EA5UIPTM.dll = 2
+EA5RDPTM.DLL = 2
+EA5LMTM.DLL = 2
+EA5EpucInst.exe = 2
+EA5Bcd0.dll = 2
+EA5BcdR0.dll = 2
+
+[SourceDisksFiles.amd64]
+EA5UIPTM.dll = 3
+EA5RDPTM.DLL = 3
+EA5LMTM.dll = 3
+EA5EpucInst.exe = 3
+EA5Bcd0.dll = 3
+EA5BcdR0.dll = 3
+
+[Strings]
+PrinterClassName="Printers"
+PrinterName="EPSON TM-T20II Receipt5"
+EPSON_CORP="EPSON"
+EPSONURL = "http://www.epson.com/"
+disk1="EPSON Printer Driver for TM-T20II"
+T20II_LM="EPSON TM-T20II Receipt5 LM,EA5LMTMT20II.DLL"

@@ -1,0 +1,4 @@
+[CD Information]
+MODEL=TM-T20II
+SKU=ANK
+VER=7.00.00

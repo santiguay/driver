@@ -1,0 +1,510 @@
+               EPSON JavaPOS ADK Version 1.14.2  Release Notes
+                                                       Seiko Epson Corporation
+                                                                 Mar. 23, 2016
+
+1. Outline
+    EPSON JavaPOS ADK Version 1.14.2 has been released. Using this release,
+    you can develop applications that are compatible with UnifiedPOS 
+    specification Ver 1.14.1
+
+    This release note contains information for multiple packages.
+     - EPSON JavaPOS ADK 1.14.2 Standard install
+     - EPSON JavaPOS ADK 1.14.2 TM-T88VI only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T88V only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T70II only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T20 only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T81 only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T82 only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T81II only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T82II only install
+     - EPSON JavaPOS ADK 1.14.2 TM-L90 only install
+     - EPSON JavaPOS ADK 1.14.2 TM-T20II only install
+     - EPSON JavaPOS ADK 1.14.2 TM-P20 only install
+     - EPSON JavaPOS ADK 1.14.2 TM-P80 only install
+
+2. Confirmed operating environment
+    Operation of EPSON JavaPOS ADK has been confirmed in the following 
+    environment.
+  (1) OS (Operating system)
+     Windows XP Professional SP3 (32bit)
+     Windows Vista SP2 (32bit/64bit)
+     Windows Server 2008 SP2 (32bit/64bit)
+     Windows 7 SP1 (32bit/64bit)
+     Windows 8 (32bit/64bit)
+     Windows 8.1 (32bit/64bit)
+     Windows 10 (32bit/64bit)
+     Windows Server 2008 R2(64bit)
+     Windows Server 2012(64bit)
+     Windows Server 2012 R2(64bit)
+     Windows Embedded Standard (32bit)
+     Windows Embedded Standard 7 (32bit/64bit)
+     Red Hat Enterprise Linux 6.6 (32bit/64bit)
+     Red Hat Enterprise Linux 7.0 (64bit)
+     SuSE Linux Enterprise 11.3 (32bit/64bit)
+     SuSE Linux Enterprise 12.0 (64bit)
+     CentOS Linux 6.6 (32bit/64bit)
+     CentOS Linux 7.0 (64bit)
+     Ubuntu 14.04 (32bit/64bit)
+  (2) Java operating environment
+     Java Standard Edition 7 Update 75
+     Java Standard Edition 8 Update 40
+      http://www.oracle.com/technetwork/java/javase/overview/index-jsp-136246.html
+
+      Note:(Windows only)
+      1) When Java version are higher than the following versions, 
+         The communication test from SetupPOS cannot be done with SetupPOS.
+         - Java Standard Edition 7 Update 21
+
+         When you use the communication test from SetupPOS, please change 
+         the directory name at the installation destination to the place 
+         where the blank is not included when you install Java and JavaPOS.
+
+      2) If following Java version is installed on Windows 10, the installation
+         is not successful.
+         - Java Standard Edition 8 Update 60 or later
+
+         When you use the Installer on Windows10, please use 
+         Java Standard Edition 8 Update 40.
+
+  (3) Imaging API
+     Java Advanced Imaging 1.1.2
+      http://www.oracle.com/technetwork/java/current-142188.html
+
+3. Installation and uninstallation
+    Follow the procedures in "EPSON JavaPOS ADK Installation Guide" for
+    installation and uninstallation.
+
+    In Linux, Please refer to the
+    "EPSON JavaPOS ADK Installation Guide for Linux.txt" for downloads 
+    and detailed installation instructions.
+
+    Note that cancelling or abruptly terminating the installer during file
+    installation could put the system in a state where further installation
+    cannot be completed. In order to install JavaPOS in this situation, use
+    the "Forced Uninstall" option and then run the installer again.  If the
+    process is cancelled while the "Forced Uninstall" options is used, it's
+    possible that the system remain in a state where further re-installation
+    cannot be completed. In this case, use the "Forced Uninstall" option again.
+
+    When running the installer on a system where JavaPOS was previously
+    installed, it is necessary to install to the same location.  If JavaPOS is
+    installed to a different location, previous settings may inhibit correct
+    operation.  In order to install JavaPOS to a different location in this
+    case, use the "Forced Uninstall" option to clear all previous settings
+    before running the installer.
+
+    Chapter 7.4 has the following sentence.
+    "In order to communicate with USB, please install libusb before 
+     installing JavaPOS."
+    But it must install libusb before installing JavaPOS to communicate
+    with all interface connection.
+
+
+4. Support devices
+    Please refer to "SupportedDevicesList.txt" for details.
+
+5. Notes of JavaPOS
+5.1 Installation and uninstallation
+     1) When installing the software, create a folder with the name 
+        "epson\pos" in the following directory.
+
+        Windows
+           Windows 2000/XP/Embedded:
+            <System Drive>:\Documents and Settings\All Users
+           Windows Vista or newer:
+            <System Drive>:\ProgramData
+        Linux
+         /var
+
+        Temporary files and information files required by DeviceService 
+        operations are saved in this "epson\pos" directory. Do not delete this
+        directory.
+     2) If you select "Custom" for the install type and execute installing, do 
+        not specify the root directory ("/") for a shortcut folder. The 
+        shortcut folder will not be created. (Linux Only)
+     3) For installation, a restart is required when the "msvcr71.dll" file is 
+        copied to or updated in the \WINDOWS\System32\ directory, or if a file 
+        to be installed by the installer is in use at install time.
+     4) For uninstallation, a restart is required when a file to be uninstalled 
+        by the uninstaller is in use at uninstall time.
+     5) Installer and Uninstaller were able to start for the second time.
+        However, this action is not supported.(Linux only)
+     6) There is a known issue with the uninstaller following an upgrade 
+        installation where the uninstaller will be unable to remove all 
+        installation directories. For default installation directory locations, 
+        the "/opt/EpsonJavaPOS" directory will not be removed by the uninstaller
+        on Linux systems; the "C:\Program Files\Epson\JavaPOS" and
+        "C:\Program Files\Epson" directories will not be removed by the
+        uninstaller on Windows systems. You can manually delete these
+        directories after the uninstaller runs to completion.
+     7) If you select "Custom" for the install type and change the location 
+        where to install the services of JavaPOS, you cannot start up the 
+        CheckHealth tool from the shortcut of the CheckHealth tool created by 
+        the installer. In that case, follow the instructions below to correct 
+        the Shell script (or batch file) that is the basis of the shortcut.
+     8) After installing on Linux, there may be a 
+        "java.lang.NullPointerException" error with the "RPMSpecFile" indicated
+        in the installer log file (Details: 
+        "ERROR - There was a problem creating the RPM package. You may not be 
+        running as root or may not have installed RPM Builder correctly."). 
+        This is an RPM issue and does not affect the operation of the ADK.
+     9) Classpath setting
+          Jar files in the directory where services of JavaPOS are installed that
+          require setting for Classpath.
+    10) Please restart your system after upgrade install When installing by silent
+        from the older versions(Ver.1.11.20 - Ver.1.13)
+
+5.2 Interface connection
+5.2.1 USB connection
+     1) multiple models of the same type:
+      If multiple models of the same type are used in USB connections at the 
+      same time, settings must be configured manually(See "5.2.1.1 Procedure").
+      Note that the procedure varies by model.
+    
+      Windows : TM-H5000II/TM-H5200/TM-J2000/TM-J2100/TM-J7000/TM-J7100/
+                TM-J7500/TM-J7600
+5.2.1.1 Procedure
+      1) Set the USB port setting [Port Name Type] to [Serial Number]. 
+      2) Specify the USB serial number as the port name.
+      
+      The USB serial number is a serial number provided exclusively for USB. 
+      The USB serial number can be checked with the following procedure.
+
+      - Perform a printer self-test print.
+        Generally, if the printer is turned on with the printer cover closed 
+        and the FEED switch held down, self-test printing is performed on roll 
+        paper.
+      - The serial number can be identified from the print results. 
+        When the print results are in format a), the part shown as "ID" is 
+        the USB serial number (in the example below YYYYYYYYYYYYYY is the 
+        serial number). When the print results are in format b), the USB 
+        serial number is the same as the printer serial number. In this case, 
+        check the label attached to the printer.
+
+        a) When the USB serial number is printed
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          Interface UB-UXXXX Ver.X.XX
+           ID  :YYYYYYYYYYYYYY
+              :
+              :
+          ----------
+
+        b) When the USB serial number is not printed
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          USB Interface or other
+              :
+              :
+          ----------
+
+          * "USB Interface or other" shown above may be printed simply as
+            "USB Interface."
+
+    Note that when setting the device using this method, changing a device
+    with a different USB serial number, requires changing the SetupPOS
+    settings.
+
+    Note that on Linux When using the Serial Number as the Port Name Type
+    for a USB connection, only the first 17 characters of the Serial Number
+    should be entered in SetupPOS.
+
+    If the "Found new hardware wizard" is displayed when the printer is 
+    turned ON/OFF, cancel the wizard and install the EPSON Advanced Printer 
+    Driver (Version 4.50 or newer). (Windows only)
+
+5.2.2 Bluetooth connection
+    1) After turning off TM printer power, wait at least 20 seconds before 
+       turning power back on. The printer will not print if power is turned 
+       on before this time has elapsed.
+    2) When the power supply of a printer is Off, if a Claim method is 
+       performed,before a response will return, it will take 7 seconds or more.
+
+5.3 Devices
+5.3.1 POSPrinter
+    1) Multi-tone printing:
+       There are following two ways for gray scale printing:
+       - PrintBitmap
+         Set to "Multi Tone" from SetupPOS [Device Details]->[Gradation], or,
+         Change the mode by DirectIO
+         method (DI_SET_BITMAP_PRINTING_TYPE)
+         For your information, white line might be seen in the print result when
+         gray scale printing via serial or Ethernet interface. Also, printing
+         speed might be slower.
+       -NVRAM
+         To register images in the NVRAM, it is necessary to register the image
+         by the utility software at first, then print by DerectIO method
+         (DI_PRINT_FLASH_BITMAP2).
+    2) Data sent from the printer after OPOS is used
+       Device settings are overwritten once OPOS is used.  Depending on this 
+       action, data could subsequently be sent from the device.  If you then 
+       directly connect to the device without using OPOS, please disregard the 
+       following data.
+        - 3-byte printer status sent when the power is turned ON
+        - 3-byte power ON notification sent when the power is turned ON
+    3) You may not print when a printing is performed immediately after you open
+       the cover and close the cover quickly twice.
+
+5.3.2 Keylock
+    1) Although the SetupPOS function was documented in the DM-KX060 manual,
+       this setting is not included to the current SetupPOS. "KeyPosition
+       Compatibility Mode" will be set "UPOS Specification".
+
+5.3.3 LineDisplay
+    1) MarqueeRepeatWait and MarqueeUnitWait property:
+       When setting MarqueeRepeatWait or MarqueeUnitWait below 300msec with DM-D30,
+       it'll be 300msec.
+
+5.4 Others
+    1) Stand by/hibernation mode for the OS
+       Since it is possible that the driver will become unstable if the 
+       computer goes into stand by/hibernation mode while the printer is in 
+       use, please avoid the use of stand by/hibernation mode.
+    2) The right of access to data (Linux only)
+       To store the necessary information, JavaPOS creates a directory called
+       "/var/epson_javapos/pos". Set the access rights of the "/var/epson_javapos/pos"
+       directory, all sub directories, and all files so JavaPOS-using users
+       are allowed to write.
+    3) The Drag & Drop function in SetupPOS requires GTK 2.10.4 or newer.
+    4) When SetupPOS is launched through a terminal on SLED 11 environment,
+       GTK-warning will be displayed. 
+       However the operation of SetupPOS will not be affected. 
+    5) The logo utility (TMFlogo, etc.)
+       The logo utility is not in this package. For uploading logo data to 
+       nonvolatile memory, please use SetBitmap method, or please obtain the
+       logo utility.
+    6) Sample program
+       - When you use the sample program, the Login ID needs to be the 
+         Administrator account group.
+       - Register with the logical device name.
+          POSPrinter       : POSPrinter
+          LineDisplay      : LineDisplay
+          MICR             : MICR
+          CheckScanner     : CheckScanner
+          CashDrawer       : CashDrawer
+          MSR              : MSR
+          Keylock          : Keylock
+          ElectronicJournal: ElectronicJournal
+      - The sample program shows an example(s) of control methods.
+        Therefore, it does not guarantee the correct operations for 
+        all the settings of all the devices.
+    7) The location to save the log files
+       The default location to save the trace log file and POSPrinter error 
+       log files is as follows:
+       Windows
+          Windows 2000/XP/Embedded:
+           <System Drive>:\Documents and Settings\All Users\EPSON\pos\tm\Trace
+          Windows Vista or newer:
+           <System Drive>:\ProgramData\EPSON\pos\tm\Trace
+       Linux
+        /var/epson_javapos/pos/trace
+    8) The location to install the Library files (Linux only)
+       The default install location for library files has been changed to the location indicated below.
+       <Current>
+        EPSON JavaPOS ADK 1.13.10 or older (32bit): "${JAVA_HOME}/lib/i386"
+        EPSON JavaPOS ADK 1.13.10 or older (64bit): "${JAVA_HOME}/lib/amd64"
+       <New>
+        EPSON JavaPOS ADK 1.13.11 or later (32bit/64bit): "/opt/EpsonJavaPOS/bin"
+       
+       The location does not change, however, if the Java folder 
+       ("${JAVA_HOME}/lib/ext") was selected in the Set User Classpath setting during installation.
+    9) There is a problem in Java.
+       http://bugs.java.com/view_bug.do?bug_id=6311057
+       For the problem, if you change system time, please finish the application which uses JavaPOS
+       before changing the system time.
+
+6. Change History of JavaPOS Standard install
+    [Version 1.14.2]
+        - TM-T88VI was added as a supported device.
+        - TM-T88VI and TM-m30 was added support for Printing Using Multiple Interfaces.
+        - USB was added to the TM-U950 support interfaces.
+        - Bluetooth and Ethernet was added to the DM-D110 support interfaces.
+        - Bluetooth and Ethernet was added to the DM-D210 support interfaces.
+        - Serial was added to the DM-D30 support interfaces.
+        - DM-D30 was supported standalone connection.(Windows only)
+        - The bug is fixed that the printing fails in case the printer job is sent to some printers
+          at same time.
+        - The bug is fixed that the initialization fails in case the battery status is changed while
+          the printer driver is initializing.
+    [Version 1.14.1]
+        - TM-m10 was added as a supported device.
+        - TM-m30 was added as a supported device.
+        - DM-D30 was added as a supported device.
+        - Added support for Windows10 (32bit/64bit)
+
+       * Note
+         TM-m10 and TM-m30 are not supported printing using multiple interfaces.
+         DM-D30 is not supported standalone connection.
+    [Version 1.14]
+        - Unified POS Version 1.14.1 is newly supported.
+        - Fixed an issue that it cannot escape from offline status after buzzer beeps.
+        - Calculation method of barcode size is improved.
+        - Bug fix that BankNumber was falsely recognized as MoneyOrder on MICR parsing.
+        - Added support for Auto Cutter function in TM-P80.
+        - Added support for Auto Cutter function in TM-P80-42C.
+        - TM-L90LinerFree was added as a supported device.
+    [Version 1.13.20]
+       - Fixed an issue that may fail to claim POSPrinter of Bluetooth connection.
+       - TM-P60II was added as a supported device with Linux.
+       - TM-P60IIPEELER was added as a supported device with Linux.
+       - TM-P80 was added as a supported device with Linux.
+       - TM-P80-42C was added as a supported device with Linux.
+       - TM-P20 was added as a supported device with Linux.
+    [Version 1.13.19]
+       - TM-P20 was added as a supported device.
+    [Version 1.13.17]
+     (1)POSPrinter
+       - Bluetooth was added to the TM-T20II support interfaces.
+       - Bluetooth was added to the TM-T20II-42C support interfaces.
+       - Bluetooth was added to the TM-T88V support interfaces.
+       - Bluetooth was added to the TM-T70II support interfaces.
+     (2)CashDrawer
+       - Bluetooth was added to the CashDrawer support interfaces.
+    [Version 1.13.16]
+        - Bug fix.
+    [Version 1.13.15]
+        - Added support for Windows 8.1 (32bit), Windows 8.1 (64bit) and 
+         Windows Server 2012 R2 (64bit).
+        - Added support for ARP (Automatic Reduction of Paper) function in TM-T82.
+        - Added support for ARP (Automatic Reduction of Paper) function in TM-T82-42C.
+    [Version 1.13.14]
+       - TM-P80 was added as a supported device.
+       - TM-P80-42C was added as a supported device.
+    [Version 1.13.13]
+       - TM-T20II was added as a supported device.
+       - TM-T20II-42C was added as a supported device.
+    [Version 1.13.11]
+       - Added support for Java SE 7.
+       - The library file install location has been changed. (Linux only)
+       - TM-L90 Simplified Chinese(GB18030) model was added as a supported device.
+       - Added support for ARP (Automatic Reduction of Paper) function in TM-L90.
+       - Added support for GS1, Composite, Datamatrix and Micro QR code symbols in TM-L90.
+    [Version 1.13.10]
+      No change.
+    [Version 1.13.9]
+       - TM-T70II was added as a supported device.
+    [Version 1.13.8]
+       - TM-P60IIPEELER was added as a supported device.
+    [Version 1.13.7]
+       - Added support for Windows 8 (32bit), Windows 8 (64bit) and 
+         Windows Server 2012 (64bit).
+       - TM-T82II was added as a supported device.
+       - TM-T82II-42C was added as a supported device.
+    [Version 1.13.6]
+       - TM-P60II was added as a supported device.
+    [Version 1.13.3]
+      No change.
+    [Version 1.13.2]
+     (1)POSPrinter
+       - TM-T81II Simplified Chinese model was added as a supported device.
+    [Version 1.13]
+     (1)New function based on the UPOS V1.12, V1.13 listed below
+         POSPrinter:
+           -ESC sequences
+             Asterisk ESC sequences.
+             Strike-though
+           - Define QR and GS1 bar code symbols for PrintBarCode method
+     (2)SetupPOS
+       - Changed USB interface setting method.
+       - The device can be tested by SetupPOS.
+     (3) POSPrinter
+       - Increase variety of ESC/POS command response which can be notified by
+         DirectIOEvent.
+       - Remove restriction on the number of images which can be stored in the
+         nonvolatile memory (NVRAM). See "SetBitmap method" in each printer 
+         manual for the detail.
+
+      Note:The above changes are for the following categories and devices.
+          Category:POSPrinter,MICR,CheckScanner,LineDisplay,CashDrawer
+          Device:TM-H6000II/III/IV,TM-T20,TM-T70,TM-T88III/IV/V,TM-L90
+                  TM-T90,TM-U220
+    [Version 1.11.20]
+     (1) POSPrinter
+       - Added support for ARP (Automatic Reduction of Paper) function in 
+         TM-T88V.
+    [Version 1.11.18]
+     (1) POSPrinter
+       - Ethernet was added to the TM-T20 support interfaces.
+       - Ethernet was added to the TM-T20-42C support interfaces.
+     (2) ElectronicJournal
+       - Ethernet was added to the TM-T20 support interfaces.
+       - Ethernet was added to the TM-T20-42C support interfaces.
+    [Version 1.11.17]
+     (1) POSPrinter
+       EPSON JavaPOS ADK 1.11.17 TM-T82 only install:
+        - Added support for South Asian languages in a multilingual model of 
+          the TM-T82.
+        - Added support for South Asian languages in a multilingual model of 
+          the TM-T82-42C.
+        - Ethernet was added to the TM-T82 support interfaces.
+        - Ethernet was added to the TM-T82-42C support interfaces.
+    [Version 1.11.16]
+     (1) Common
+       - Added support for Windows 7 SP1 (32bit), Windows 7 SP1 (64bit), 
+         Windows Server 2008 R2 SP1 (64bit).
+     (2) POSPrinter
+       - TM-H6000IV Multilingual Character model was added as a supported 
+         device.
+    [Version 1.11.15]
+     (1) POSPrinter
+       - TM-T82 model was added as a supported device.
+       - TM-T82-42C model was added as a supported device.
+    [Version 1.11.14]
+     (1) Common
+       - Added support for Red Hat Enterprise Linux 5.3 (64bit), SuSE Linux 
+         Enterprise 11 (64bit), Windows Embedded Standard 7 (32bit) and Windows
+         Embedded Standard 7 (64bit).
+     (2) POSPrinter
+       - Added support for the TM-H6000IV
+       - Added support for the TM-H2000
+       - Added support for the TM-T81
+     (3) MICR
+       - Added support for the TM-H6000IV
+       - Added support for the TM-H2000
+     (4) ElectronicJournal
+       - Added support for the TM-H6000IV
+    [Version 1.11.13]
+     (1) Common
+       - Added support for Windows Vista (64bit), Windows 7 (64bit), Windows 
+         Server 2008 R2 (64bit), Red Hat Enterprise Linux 5.3 (32bit), SuSE 
+         Linux Enterprise 11 (32bit).
+       - Removed support for Red Hat Linux 9 (32bit), Red Hat Enterprise Linux 
+         5 (32bit) and SuSE Linux Enterprise 10 SP1 (32bit).
+     (2) POSPrinter
+       - Added support for the TM-T20 with a serial connection.
+       - Added support for the TM-T20-42C with a serial connection.
+     (3) ElectronicJournal
+       - Added support for the TM-T20 with a serial connection.
+       - Added support for the TM-T20-42C with a serial connection.
+    [Version 1.11.12]
+     (1) POSPrinter
+       - Added support for the TM-T88V(Simplified Chinese(GB18030) model)
+       - Added support for the TM-T88V(Traditional Chinese model)
+       - Added support for the TM-T20
+       - Added support for the TM-T20-42C
+       - Added the Multi-tone printing feature.(TM-T88V only)
+       - Added the Optional external buzzer.(TM-T88V only)
+       - Added a setting to allow the default character set to be changed. 
+         (TM-T20)
+       - Add support the Unicode for the printing of the character string.
+         (TM-T20)
+     (2) ElectronicJournal
+       - Added support for the TM-T20
+       - Added support for the TM-T20-42C
+    [Version 1.11.11]
+     (1) Common
+       - Added support for the Unit package
+       - Added support for Windows Server 2008 SP2, 
+         Windows Embedded Standard, and Windows 7
+     (2) POSPrinter
+       - Added support for the TM-T88V
+       - Added a setting to allow the default character set to be changed. 
+         (TM-T88V only)
+       - Add support the Unicode for the printing of the character string.
+         (TM-T88V only)
+     (3) ElectronicJournal
+       - Added support for the TM-T88V
